@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastModified": "2026-08-24T13:37:45.793241+00:00",
+  "lastModified": "2026-08-24T13:41:02.473326+00:00",
   "eventName": "Wedding Seating Planner",
   "defaultCapacity": 12,
   "guests": [
@@ -2969,7 +2969,7 @@
       "previousApproved": null
     },
     {
-      "id": "guest_ליאת_משפחה_אבא_כלה_228",
+      "id": "guest_ליאת_משרד_אבא_229",
       "name": "ליאת",
       "approved": 1,
       "invited": 1,
@@ -2978,11 +2978,11 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ליאת",
-      "statusFlag": "normal",
-      "previousApproved": null
+      "statusFlag": "updated_count",
+      "previousApproved": 0
     },
     {
-      "id": "guest_ליאת_משפחה_אבא_כלה_228",
+      "id": "guest_ליאת_משרד_אבא_229",
       "name": "ליאת",
       "approved": 0,
       "invited": 1,
@@ -2991,8 +2991,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "ליאת",
-      "statusFlag": "updated_count",
-      "previousApproved": 1
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ליאת_ואופיר_אחות_230",
@@ -3593,7 +3593,7 @@
       "previousApproved": null
     },
     {
-      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_277",
+      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_276",
       "name": "מני בן הרוש",
       "approved": 0,
       "invited": 1,
@@ -3606,7 +3606,7 @@
       "previousApproved": null
     },
     {
-      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_277",
+      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_276",
       "name": "מני בן הרוש",
       "approved": 0,
       "invited": 1,
@@ -3619,7 +3619,7 @@
       "previousApproved": null
     },
     {
-      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_277",
+      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_276",
       "name": "מני בן הרוש",
       "approved": 0,
       "invited": 1,
@@ -3736,7 +3736,7 @@
       "previousApproved": null
     },
     {
-      "id": "guest_מתן_חברים_חתן_287",
+      "id": "guest_מתן_משפחה_תוספות_288",
       "name": "מתן",
       "approved": 0,
       "invited": 1,
@@ -3745,11 +3745,11 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מתן",
-      "statusFlag": "normal",
-      "previousApproved": null
+      "statusFlag": "updated_count",
+      "previousApproved": 1
     },
     {
-      "id": "guest_מתן_חברים_חתן_287",
+      "id": "guest_מתן_משפחה_תוספות_288",
       "name": "מתן",
       "approved": 1,
       "invited": 1,
@@ -3758,8 +3758,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מתן",
-      "statusFlag": "updated_count",
-      "previousApproved": 0
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מתן_ושחף_סוקולר_חברים_חתן_289",
@@ -4464,7 +4464,7 @@
       "previousApproved": null
     },
     {
-      "id": "guest_עמי_משפחה_תוספות_343",
+      "id": "guest_עמי_משפחה_תוספות_344",
       "name": "עמי",
       "approved": 0,
       "invited": 1,
@@ -4473,11 +4473,11 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עמי",
-      "statusFlag": "normal",
-      "previousApproved": null
+      "statusFlag": "updated_count",
+      "previousApproved": 1
     },
     {
-      "id": "guest_עמי_משפחה_תוספות_343",
+      "id": "guest_עמי_משפחה_תוספות_344",
       "name": "עמי",
       "approved": 1,
       "invited": 1,
@@ -4486,8 +4486,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עמי",
-      "statusFlag": "updated_count",
-      "previousApproved": 0
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עמי_גבסו_משפחה_קרובה_345",
@@ -5751,7 +5751,7 @@
       "previousApproved": null
     },
     {
-      "id": "guest_תמר_משפחה_תוספות_442",
+      "id": "guest_תמר_משרד_אבא_443",
       "name": "תמר",
       "approved": 1,
       "invited": 1,
@@ -5764,7 +5764,7 @@
       "previousApproved": null
     },
     {
-      "id": "guest_תמר_משפחה_תוספות_442",
+      "id": "guest_תמר_משרד_אבא_443",
       "name": "תמר",
       "approved": 1,
       "invited": 1,
@@ -5790,7 +5790,7 @@
       "previousApproved": null
     },
     {
-      "id": "guest_ליאת_משרד_אבא_229",
+      "id": "guest_ליאת_משפחה_אבא_כלה_228",
       "name": "ליאת",
       "approved": 1,
       "invited": 1,
@@ -5800,10 +5800,10 @@
       "uiExtra": "",
       "rawName": "ליאת",
       "statusFlag": "normal",
-      "previousApproved": 0
+      "previousApproved": null
     },
     {
-      "id": "guest_ליאת_משרד_אבא_229",
+      "id": "guest_ליאת_משפחה_אבא_כלה_228",
       "name": "ליאת",
       "approved": 0,
       "invited": 1,
@@ -5813,10 +5813,10 @@
       "uiExtra": "",
       "rawName": "ליאת",
       "statusFlag": "normal",
-      "previousApproved": null
+      "previousApproved": 1
     },
     {
-      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_278",
+      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_277",
       "name": "מני בן הרוש",
       "approved": 0,
       "invited": 1,
@@ -5829,7 +5829,7 @@
       "previousApproved": null
     },
     {
-      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_278",
+      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_277",
       "name": "מני בן הרוש",
       "approved": 0,
       "invited": 1,
@@ -5842,7 +5842,7 @@
       "previousApproved": null
     },
     {
-      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_278",
+      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_277",
       "name": "מני בן הרוש",
       "approved": 0,
       "invited": 1,
@@ -5855,7 +5855,7 @@
       "previousApproved": null
     },
     {
-      "id": "guest_מתן_משפחה_תוספות_288",
+      "id": "guest_מתן_חברים_חתן_287",
       "name": "מתן",
       "approved": 0,
       "invited": 1,
@@ -5865,10 +5865,10 @@
       "uiExtra": "",
       "rawName": "מתן",
       "statusFlag": "normal",
-      "previousApproved": 1
+      "previousApproved": null
     },
     {
-      "id": "guest_מתן_משפחה_תוספות_288",
+      "id": "guest_מתן_חברים_חתן_287",
       "name": "מתן",
       "approved": 1,
       "invited": 1,
@@ -5878,10 +5878,10 @@
       "uiExtra": "",
       "rawName": "מתן",
       "statusFlag": "normal",
-      "previousApproved": null
+      "previousApproved": 0
     },
     {
-      "id": "guest_עמי_משפחה_תוספות_344",
+      "id": "guest_עמי_משפחה_תוספות_343",
       "name": "עמי",
       "approved": 0,
       "invited": 1,
@@ -5891,10 +5891,10 @@
       "uiExtra": "",
       "rawName": "עמי",
       "statusFlag": "normal",
-      "previousApproved": 1
+      "previousApproved": null
     },
     {
-      "id": "guest_עמי_משפחה_תוספות_344",
+      "id": "guest_עמי_משפחה_תוספות_343",
       "name": "עמי",
       "approved": 1,
       "invited": 1,
@@ -5904,10 +5904,10 @@
       "uiExtra": "",
       "rawName": "עמי",
       "statusFlag": "normal",
-      "previousApproved": null
+      "previousApproved": 0
     },
     {
-      "id": "guest_תמר_משרד_אבא_443",
+      "id": "guest_תמר_משפחה_תוספות_442",
       "name": "תמר",
       "approved": 1,
       "invited": 1,
@@ -5920,7 +5920,7 @@
       "previousApproved": null
     },
     {
-      "id": "guest_תמר_משרד_אבא_443",
+      "id": "guest_תמר_משפחה_תוספות_442",
       "name": "תמר",
       "approved": 1,
       "invited": 1,
@@ -5933,7 +5933,7 @@
       "previousApproved": null
     },
     {
-      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_276",
+      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_278",
       "name": "מני בן הרוש",
       "approved": 0,
       "invited": 1,
@@ -5942,7 +5942,34 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "מני בן הרוש",
-      "statusFlag": "normal"
+      "statusFlag": "normal",
+      "previousApproved": null
+    },
+    {
+      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_278",
+      "name": "מני בן הרוש",
+      "approved": 0,
+      "invited": 1,
+      "group": "משפחה אבא כלה",
+      "hasPhone": "Yes/Unknown",
+      "hasNotes": false,
+      "uiExtra": "",
+      "rawName": "מני בן הרוש",
+      "statusFlag": "normal",
+      "previousApproved": null
+    },
+    {
+      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_278",
+      "name": "מני בן הרוש",
+      "approved": 0,
+      "invited": 1,
+      "group": "משפחה אבא כלה",
+      "hasPhone": "Yes/Unknown",
+      "hasNotes": true,
+      "uiExtra": "",
+      "rawName": "מני בן הרוש",
+      "statusFlag": "normal",
+      "previousApproved": null
     }
   ],
   "assignments": [],
