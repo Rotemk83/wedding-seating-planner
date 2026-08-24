@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import confetti from 'canvas-confetti';
-import {
+import type {
   EventState,
   GuestGroup,
   TableOccupancy,
@@ -12,6 +12,7 @@ import {
   loadEventState,
   persistEventState,
   downloadJsonBackup,
+  clearAllEventData,
 } from '../lib/storage';
 import { parseGuestCsv } from '../lib/csvParser';
 import { reconcileGuestsWithCsv } from '../lib/reconciliation';
@@ -24,7 +25,7 @@ export function createInitialState(): EventState {
   return {
     version: INITIAL_VERSION,
     lastModified: new Date().toISOString(),
-    eventName: 'Wedding Seating Planner (לין ורותם)',
+    eventName: 'Wedding Seating Planner',
     defaultCapacity: 12,
     guests: [],
     assignments: [],
@@ -208,7 +209,7 @@ export function useSeatingState() {
     []
   );
 
-  // Debounced Autosave (saves 2.0s after last change)
+  // Debounced Autosave (saves 1.5s after last change)
   useEffect(() => {
     if (!isInitialized || saveStatus !== 'unsaved') return;
 
@@ -227,7 +228,7 @@ export function useSeatingState() {
         setSaveStatus('error');
         setSaveErrorMessage(res.error || 'Failed to save state');
       }
-    }, 2000);
+    }, 1500);
 
     return () => {
       if (autosaveTimerRef.current) {
@@ -287,11 +288,34 @@ export function useSeatingState() {
     });
   }, [state]);
 
+  // Update Event Title Name
+  const updateEventName = useCallback(
+    (name: string) => {
+      updateStateWithHistory((prev) => ({
+        ...prev,
+        eventName: name,
+      }));
+    },
+    [updateStateWithHistory]
+  );
+
+  // Reset / Clear All Data
+  const resetAllData = useCallback(() => {
+    clearAllEventData();
+    const fresh = createInitialState();
+    setState(fresh);
+    setHistory({ past: [], future: [] });
+    setSelectedTableId(null);
+    setHighlightedTableId(null);
+    setReconcileReport(null);
+    setSaveStatus('saved');
+    persistEventState(fresh);
+  }, []);
+
   // Assign Guest to Table (Atomic reassignment)
   const assignGuestToTable = useCallback(
     (guestId: string, targetTableId: string) => {
       updateStateWithHistory((prev) => {
-        // Remove existing assignment for this guest if any
         const filtered = prev.assignments.filter((a) => a.guestId !== guestId);
         return {
           ...prev,
@@ -302,7 +326,7 @@ export function useSeatingState() {
     [updateStateWithHistory]
   );
 
-  // Unassign Guest (Remove from table back to unassigned)
+  // Unassign Guest
   const unassignGuest = useCallback(
     (guestId: string) => {
       updateStateWithHistory((prev) => ({
@@ -313,7 +337,7 @@ export function useSeatingState() {
     [updateStateWithHistory]
   );
 
-  // Clear all guests from a specific table
+  // Clear Table
   const clearTable = useCallback(
     (tableId: string) => {
       updateStateWithHistory((prev) => ({
@@ -346,7 +370,7 @@ export function useSeatingState() {
     [updateStateWithHistory]
   );
 
-  // Update table position (for Edit Layout mode)
+  // Update table position
   const updateTablePosition = useCallback(
     (tableId: string, x: number, y: number) => {
       updateStateWithHistory((prev) => ({
@@ -357,7 +381,7 @@ export function useSeatingState() {
     [updateStateWithHistory]
   );
 
-  // Dismiss status flag on guest
+  // Dismiss status flag
   const dismissGuestFlag = useCallback(
     (guestId: string) => {
       updateStateWithHistory((prev) => ({
@@ -368,7 +392,7 @@ export function useSeatingState() {
     [updateStateWithHistory]
   );
 
-  // Import CSV (First time or Re-import with reconciliation)
+  // Import CSV
   const importCsv = useCallback(
     (csvContent: string) => {
       const parseResult = parseGuestCsv(csvContent);
@@ -427,7 +451,7 @@ export function useSeatingState() {
     downloadJsonBackup(state);
   }, [state]);
 
-  // Focus on a table from sidebar
+  // Focus table
   const focusTable = useCallback(
     (tableNumber: number) => {
       const table = state.tables.find((t) => t.tableNumber === tableNumber);
@@ -459,6 +483,8 @@ export function useSeatingState() {
     canRedo: history.future.length > 0,
     undo,
     redo,
+    updateEventName,
+    resetAllData,
     assignGuestToTable,
     unassignGuest,
     clearTable,

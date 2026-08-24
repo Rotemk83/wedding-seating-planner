@@ -9,6 +9,7 @@ import {
   useSensor,
   useSensors,
 } from '@dnd-kit/core';
+import { Users, LayoutGrid } from 'lucide-react';
 import { useSeatingState } from './hooks/useSeatingState';
 import { isSecretGateUnlocked, getSavedTheme, setSavedTheme, readJsonBackupFile } from './lib/storage';
 import { exportHallToPdf, exportHallToPng } from './lib/pdfExport';
@@ -25,7 +26,7 @@ import type { GuestGroup } from './types';
 export function App() {
   const [unlocked, setUnlocked] = useState<boolean>(() => isSecretGateUnlocked());
   const [theme, setTheme] = useState<'light' | 'dark' | 'system'>(() => getSavedTheme());
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState<boolean>(() => window.innerWidth >= 1024);
   const [activeDragGuest, setActiveDragGuest] = useState<GuestGroup | null>(null);
 
   const csvInputRef = useRef<HTMLInputElement>(null);
@@ -50,6 +51,8 @@ export function App() {
     canRedo,
     undo,
     redo,
+    updateEventName,
+    resetAllData,
     assignGuestToTable,
     unassignGuest,
     clearTable,
@@ -82,7 +85,6 @@ export function App() {
   // Global Keyboard Shortcuts
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Ignore if user is actively typing in an input/textarea
       if (['INPUT', 'TEXTAREA', 'SELECT'].includes((e.target as HTMLElement).tagName)) {
         return;
       }
@@ -208,6 +210,7 @@ export function App() {
       {/* Top Application Header & Live Dashboard */}
       <Header
         eventName={state.eventName}
+        onUpdateEventName={updateEventName}
         stats={stats}
         canUndo={canUndo}
         canRedo={canRedo}
@@ -226,6 +229,7 @@ export function App() {
         onImportJsonBackup={() => backupInputRef.current?.click()}
         onExportPng={exportHallToPng}
         onExportPdf={() => exportHallToPdf(state)}
+        onClearAllData={resetAllData}
       />
 
       {/* Main Content Area */}
@@ -245,7 +249,13 @@ export function App() {
               guests={state.guests}
               assignments={state.assignments}
               tables={state.tables}
-              onLocateTable={focusTable}
+              onLocateTable={(num) => {
+                focusTable(num);
+                // On mobile, close sidebar when locating a table
+                if (window.innerWidth < 768) {
+                  setSidebarOpen(false);
+                }
+              }}
               onUnassignGuest={unassignGuest}
               onDismissFlag={dismissGuestFlag}
               isOpen={sidebarOpen}
@@ -263,6 +273,26 @@ export function App() {
               onSelectTable={(id) => setSelectedTableId(id)}
               onTablePositionChange={updateTablePosition}
             />
+
+            {/* Floating Mobile Bottom Navigation Button */}
+            <div className="sm:hidden fixed bottom-4 left-4 z-40">
+              <button
+                onClick={() => setSidebarOpen(!sidebarOpen)}
+                className="flex items-center gap-2 px-4 py-2.5 bg-indigo-600 text-white rounded-full shadow-2xl font-semibold text-xs border border-indigo-400/30 active:scale-95 transition-all"
+              >
+                {sidebarOpen ? (
+                  <>
+                    <LayoutGrid className="w-4 h-4" />
+                    <span>View Floor Plan</span>
+                  </>
+                ) : (
+                  <>
+                    <Users className="w-4 h-4" />
+                    <span>Guests ({stats.unassignedAttending} unseated)</span>
+                  </>
+                )}
+              </button>
+            </div>
 
             {/* Drag Overlay Card */}
             <DragOverlay dropAnimation={{ duration: 200, easing: 'ease' }}>

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
-import { ZoomIn, ZoomOut, Maximize2, RotateCcw, Move, Music, Sparkles, GlassWater, DoorOpen } from 'lucide-react';
+import { ZoomIn, ZoomOut, Maximize2, RotateCcw, Move, Music, Sparkles, GlassWater, DoorOpen, Hand } from 'lucide-react';
 import type { TableConfig, HallElement, TableOccupancy } from '../types';
 import { TableNode } from './TableNode';
 
@@ -24,18 +24,19 @@ export const HallCanvas: React.FC<HallCanvasProps> = ({
   onSelectTable,
   onTablePositionChange,
 }) => {
-  const [scale, setScale] = useState(0.85);
-  const [pan, setPan] = useState({ x: 40, y: 20 });
+  const [scale, setScale] = useState(0.75);
+  const [pan, setPan] = useState({ x: 20, y: 20 });
   const [isPanning, setIsPanning] = useState(false);
   const startPanRef = useRef({ x: 0, y: 0 });
+  const touchDistanceRef = useRef<number | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Zoom controls
-  const handleZoomIn = () => setScale((prev) => Math.min(prev + 0.15, 2.0));
-  const handleZoomOut = () => setScale((prev) => Math.max(prev - 0.15, 0.4));
+  const handleZoomIn = () => setScale((prev) => Math.min(prev + 0.15, 2.2));
+  const handleZoomOut = () => setScale((prev) => Math.max(prev - 0.15, 0.35));
   const handleResetZoom = () => {
-    setScale(0.85);
-    setPan({ x: 40, y: 20 });
+    setScale(0.75);
+    setPan({ x: 20, y: 20 });
   };
 
   const handleFitToScreen = useCallback(() => {
@@ -44,23 +45,25 @@ export const HallCanvas: React.FC<HallCanvasProps> = ({
     const canvasWidth = 1450;
     const canvasHeight = 1250;
 
-    const scaleX = (clientWidth - 80) / canvasWidth;
-    const scaleY = (clientHeight - 80) / canvasHeight;
-    const optimalScale = Math.min(Math.max(Math.min(scaleX, scaleY), 0.45), 1.2);
+    const scaleX = (clientWidth - 40) / canvasWidth;
+    const scaleY = (clientHeight - 40) / canvasHeight;
+    const optimalScale = Math.min(Math.max(Math.min(scaleX, scaleY), 0.35), 1.2);
 
     setScale(optimalScale);
     setPan({
-      x: (clientWidth - canvasWidth * optimalScale) / 2,
-      y: 20,
+      x: Math.max(10, (clientWidth - canvasWidth * optimalScale) / 2),
+      y: Math.max(10, (clientHeight - canvasHeight * optimalScale) / 2),
     });
   }, []);
 
-  // Initial fit on mount
+  // Fit on mount and on window resize
   useEffect(() => {
     handleFitToScreen();
+    window.addEventListener('resize', handleFitToScreen);
+    return () => window.removeEventListener('resize', handleFitToScreen);
   }, [handleFitToScreen]);
 
-  // Pan interaction
+  // Mouse Pan interaction
   const handleMouseDown = (e: React.MouseEvent) => {
     if ((e.target as HTMLElement).closest('.table-node-element')) return;
     setIsPanning(true);
@@ -84,7 +87,52 @@ export const HallCanvas: React.FC<HallCanvasProps> = ({
   const handleWheel = (e: React.WheelEvent) => {
     e.preventDefault();
     const zoomFactor = e.deltaY < 0 ? 1.08 : 0.92;
-    setScale((prev) => Math.min(Math.max(prev * zoomFactor, 0.4), 2.2));
+    setScale((prev) => Math.min(Math.max(prev * zoomFactor, 0.35), 2.2));
+  };
+
+  // Touch Gesture Handling for Mobile & Tablets
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (e.touches.length === 1) {
+      // 1 Finger Pan
+      setIsPanning(true);
+      startPanRef.current = {
+        x: e.touches[0].clientX - pan.x,
+        y: e.touches[0].clientY - pan.y,
+      };
+      touchDistanceRef.current = null;
+    } else if (e.touches.length === 2) {
+      // 2 Finger Pinch Zoom
+      setIsPanning(false);
+      const dist = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      touchDistanceRef.current = dist;
+    }
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (e.touches.length === 1 && isPanning) {
+      // Pan
+      setPan({
+        x: e.touches[0].clientX - startPanRef.current.x,
+        y: e.touches[0].clientY - startPanRef.current.y,
+      });
+    } else if (e.touches.length === 2 && touchDistanceRef.current !== null) {
+      // Pinch Zoom
+      const dist = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      const delta = dist / touchDistanceRef.current;
+      setScale((prev) => Math.min(Math.max(prev * (delta > 1 ? 1.03 : 0.97), 0.35), 2.2));
+      touchDistanceRef.current = dist;
+    }
+  };
+
+  const handleTouchEnd = () => {
+    setIsPanning(false);
+    touchDistanceRef.current = null;
   };
 
   return (
@@ -95,56 +143,66 @@ export const HallCanvas: React.FC<HallCanvasProps> = ({
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
       onWheel={handleWheel}
-      className={`relative flex-1 h-full overflow-hidden bg-slate-100 dark:bg-slate-950 canvas-grid-pattern ${
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+      style={{ touchAction: 'none' }}
+      className={`relative flex-1 h-full w-full overflow-hidden bg-slate-100 dark:bg-slate-950 canvas-grid-pattern select-none ${
         isPanning ? 'cursor-grabbing' : 'cursor-grab'
       }`}
     >
-      {/* Floating Canvas Controls */}
-      <div className="absolute bottom-6 right-6 z-30 flex items-center gap-1.5 p-1.5 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xl">
+      {/* Floating Canvas Controls (Mobile & Desktop) */}
+      <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 z-30 flex items-center gap-1 sm:gap-1.5 p-1 sm:p-1.5 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl">
         <button
           onClick={handleZoomIn}
-          className="p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors"
+          className="p-2 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors"
           title="Zoom In (+)"
         >
-          <ZoomIn className="w-4 h-4" />
+          <ZoomIn className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
 
-        <span className="text-xs font-semibold text-slate-700 dark:text-slate-300 px-2 min-w-[48px] text-center">
+        <span className="text-xs font-bold text-slate-800 dark:text-slate-200 px-1.5 sm:px-2 min-w-[42px] sm:min-w-[48px] text-center">
           {Math.round(scale * 100)}%
         </span>
 
         <button
           onClick={handleZoomOut}
-          className="p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors"
+          className="p-2 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors"
           title="Zoom Out (-)"
         >
-          <ZoomOut className="w-4 h-4" />
+          <ZoomOut className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
 
         <div className="w-px h-5 bg-slate-200 dark:bg-slate-700 my-auto" />
 
         <button
           onClick={handleFitToScreen}
-          className="p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors"
+          className="p-2 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors"
           title="Fit Venue to Screen"
         >
-          <Maximize2 className="w-4 h-4" />
+          <Maximize2 className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
 
         <button
           onClick={handleResetZoom}
-          className="p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors"
-          title="Reset Zoom"
+          className="p-2 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors"
+          title="Reset View"
         >
-          <RotateCcw className="w-4 h-4" />
+          <RotateCcw className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
+      </div>
+
+      {/* Mobile Touch Gesture Hint */}
+      <div className="sm:hidden absolute top-3 left-3 z-30 px-2.5 py-1 bg-slate-900/75 text-slate-200 text-[10px] font-medium rounded-lg backdrop-blur-sm pointer-events-none flex items-center gap-1">
+        <Hand className="w-3 h-3 text-indigo-400" />
+        <span>Touch & drag to pan | Pinch to zoom</span>
       </div>
 
       {/* Edit Layout Mode Banner */}
       {isEditLayoutMode && (
         <div className="absolute top-4 left-1/2 -translate-x-1/2 z-30 px-4 py-2 bg-amber-500 text-white text-xs font-semibold rounded-full shadow-lg flex items-center gap-2 animate-pulse">
           <Move className="w-4 h-4" />
-          <span>Edit Layout Mode Active: Tables can be rearranged</span>
+          <span>Edit Layout Mode: Drag tables to reposition</span>
         </div>
       )}
 
@@ -262,7 +320,7 @@ export const HallCanvas: React.FC<HallCanvasProps> = ({
           return null;
         })}
 
-        {/* Tables */}
+        {/* 34 Tables */}
         {tables.map((table) => {
           const occupancy = tableOccupancies.get(table.id) || {
             tableId: table.id,

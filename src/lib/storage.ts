@@ -1,8 +1,9 @@
-import { EventState } from '../types';
+import type { EventState } from '../types';
 
 const STORAGE_KEY = 'wedding_seating_state_v1';
 const UNLOCK_KEY = 'wedding_seating_unlocked';
 const THEME_KEY = 'wedding_seating_theme';
+const GITHUB_TOKEN_KEY = 'wedding_seating_gh_token';
 
 export interface SaveResult {
   success: boolean;
@@ -62,6 +63,32 @@ export function setSavedTheme(theme: 'light' | 'dark' | 'system'): void {
 }
 
 /**
+ * Gets stored GitHub token for direct GitHub Pages repository sync
+ */
+export function getStoredGitHubToken(): string | null {
+  try {
+    return localStorage.getItem(GITHUB_TOKEN_KEY) || null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Stores GitHub token for direct GitHub Pages repository sync
+ */
+export function setStoredGitHubToken(token: string | null): void {
+  try {
+    if (token) {
+      localStorage.setItem(GITHUB_TOKEN_KEY, token.trim());
+    } else {
+      localStorage.removeItem(GITHUB_TOKEN_KEY);
+    }
+  } catch (e) {
+    console.error('Failed to save GitHub token', e);
+  }
+}
+
+/**
  * Gets cached state from browser localStorage
  */
 export function getLocalCachedState(): EventState | null {
@@ -87,20 +114,48 @@ export function saveLocalCachedState(state: EventState): void {
 }
 
 /**
- * Loads event state from remote API with fallback to local cache
+ * Completely resets and clears all event data from storage
+ */
+export function clearAllEventData(): void {
+  try {
+    localStorage.removeItem(STORAGE_KEY);
+  } catch (e) {
+    console.error('Failed to clear local event data', e);
+  }
+}
+
+const GITHUB_OWNER = 'Rotemk83';
+const GITHUB_REPO = 'wedding-seating-planner';
+const FILE_PATH = 'data/event-state.json';
+
+/**
+ * Loads event state from remote API / GitHub with fallback to local cache
  */
 export async function loadEventState(): Promise<{ state: EventState | null; source: 'remote' | 'local' | 'none' }> {
-  // 1. Try remote Git endpoint first
+  // 1. Try remote Git endpoint first (/api/state or direct GitHub API)
   try {
-    const res = await fetch('/api/state', {
-      method: 'GET',
-      headers: { 'Content-Type': 'application/json' },
-    });
+    const token = getStoredGitHubToken();
+    const headers: Record<string, string> = {
+      'Content-Type': 'application/json',
+    };
+    if (token) {
+      headers['Authorization'] = `Bearer ${token}`;
+    }
 
-    if (res.ok) {
+    // Try serverless endpoint first
+    let res = await fetch('/api/state', { method: 'GET', headers }).catch(() => null);
+
+    // If serverless is 404/static (like on GitHub Pages), try fetching data/event-state.json directly from GitHub
+    if (!res || !res.ok) {
+      const ghUrl = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/main/${FILE_PATH}`;
+      res = await fetch(ghUrl).catch(() => null);
+    }
+
+    if (res && res.ok) {
       const data = await res.json();
-      if (data && data.state && data.state.guests) {
-        const remoteState = data.state as EventState;
+      const remoteState = (data.state || data) as EventState;
+
+      if (remoteState && remoteState.guests && remoteState.guests.length > 0) {
         const localState = getLocalCachedState();
 
         // If local state has newer lastModified timestamp, prioritize local
@@ -113,7 +168,6 @@ export async function loadEventState(): Promise<{ state: EventState | null; sour
           return { state: localState, source: 'local' };
         }
 
-        // Cache remote locally
         saveLocalCachedState(remoteState);
         return { state: remoteState, source: 'remote' };
       }
@@ -143,35 +197,80 @@ export async function persistEventState(state: EventState): Promise<SaveResult> 
   // Always save locally first for instant durability
   saveLocalCachedState(updatedState);
 
-  // Attempt serverless Git commit
+  // Attempt serverless Git commit or direct GitHub API commit
+  const token = getStoredGitHubToken();
+
   try {
+    // 1. Try serverless /api/state
     const res = await fetch('/api/state', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ state: updatedState }),
-    });
+    }).catch(() => null);
 
-    if (res.ok) {
+    if (res && res.ok) {
       return {
         success: true,
         source: 'remote',
         timestamp: updatedState.lastModified,
       };
-    } else {
-      const errText = await res.text();
-      return {
-        success: true, // Still durable locally
-        source: 'local',
-        timestamp: updatedState.lastModified,
-        error: `Git sync unavailable (${res.status}): ${errText}`,
-      };
     }
-  } catch (err: any) {
+
+    // 2. Direct GitHub API commit if token configured
+    if (token) {
+      const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${FILE_PATH}`;
+      
+      // Get SHA
+      let sha: string | undefined;
+      const getFile = await fetch(url, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          Accept: 'application/vnd.github.v3+json',
+        },
+      });
+      if (getFile.ok) {
+        const fileData = await getFile.json();
+        sha = fileData.sha;
+      }
+
+      const jsonStr = JSON.stringify(updatedState, null, 2);
+      const b64 = btoa(unescape(encodeURIComponent(jsonStr)));
+
+      const putRes = await fetch(url, {
+        method: 'PUT',
+        headers: {
+          Authorization: `Bearer ${token}`,
+          Accept: 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: `Update seating state - ${new Date().toISOString()}`,
+          content: b64,
+          branch: 'main',
+          sha,
+        }),
+      });
+
+      if (putRes.ok) {
+        return {
+          success: true,
+          source: 'remote',
+          timestamp: updatedState.lastModified,
+        };
+      }
+    }
+
     return {
-      success: true, // Durable locally
+      success: true,
       source: 'local',
       timestamp: updatedState.lastModified,
-      error: `Offline/Git sync failed: ${err.message || err}`,
+    };
+  } catch (err: any) {
+    return {
+      success: true,
+      source: 'local',
+      timestamp: updatedState.lastModified,
+      error: err.message || 'Offline save',
     };
   }
 }

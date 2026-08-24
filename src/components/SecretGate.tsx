@@ -43,7 +43,7 @@ export const SecretGate: React.FC<SecretGateProps> = ({ onUnlock }) => {
             <span>Private Event Workspace</span>
           </div>
           <h1 className="text-2xl font-bold text-white tracking-tight">Wedding Seating Planner</h1>
-          <p className="text-sm text-slate-400 mt-1">לין & רותם  סידור הושבה חכם לאירוע</p>
+          <p className="text-sm text-slate-400 mt-1">Smart Event Seating Planner  סידור הושבה חכם</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
