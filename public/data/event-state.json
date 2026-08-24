@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastModified": "2026-08-24T13:23:17.166666+00:00",
+  "lastModified": "2026-08-24T13:29:18.086772+00:00",
   "eventName": "Wedding Seating Planner",
   "defaultCapacity": 12,
   "guests": [
@@ -14,7 +14,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אבי ודורית רמז",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אבי_ומורין_אח_1",
@@ -26,7 +27,8 @@
       "hasNotes": false,
       "uiExtra": "3",
       "rawName": "+ 3אבי ומורין",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אבי_ונופר_רוקח_חברים_חתן_2",
@@ -38,7 +40,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אבי ונופר רוקח",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אביאל_סוטחי_חברים_כלה_3",
@@ -50,7 +53,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אביאל סוטחי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אביב_דבוש_חברים_חתן_4",
@@ -62,7 +66,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אביב דבוש",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אביב_ותום_משפחה_תוספות_5",
@@ -74,7 +79,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אביב ותום",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אביב_פירי_חברים_חתן_6",
@@ -86,7 +92,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אביב פירי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אביבה_כהן_משפחה_אמא_כלה_7",
@@ -98,7 +105,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אביבה כהן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אבידור_חסן_חברים_חתן_8",
@@ -110,7 +118,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אבידור חסן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אביחי_סעדה_חברים_חתן_9",
@@ -122,7 +131,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אביחי סעדה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אביעד_ראובן_משפחה_אמא_כלה_10",
@@ -134,7 +144,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אביעד ראובן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אבישי_פריינטה_משפחה_אמא_כלה_11",
@@ -146,7 +157,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "אבישי פריינטה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אבישי_קינן_חברים_חתן_12",
@@ -158,7 +170,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אבישי קינן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אבנר_פחימה_משפחה_אבא_כלה_13",
@@ -170,7 +183,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "אבנר פחימה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אברהם_משרד_אבא_14",
@@ -182,7 +196,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אברהם",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אגם_וקנין_חברים_חתן_15",
@@ -194,7 +209,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אגם וקנין",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אדיר_יעקובי_חברים_חתן_16",
@@ -206,7 +222,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אדיר יעקובי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אדיר_נבון_משפחה_אבא_כלה_17",
@@ -218,7 +235,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אדיר נבון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אודל_ופלג_סולומון_חברים_חתן_18",
@@ -230,7 +248,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אודל ופלג סולומון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אוהד_ומאי_סייפר_חברים_חתן_19",
@@ -242,7 +261,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אוהד ומאי סייפר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אוליסיה_משפחה_אמא_כלה_20",
@@ -254,7 +274,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אוליסיה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אוסמה_משרד_אבא_21",
@@ -266,7 +287,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אוסמה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אופיר_חברים_חתן_22",
@@ -278,7 +300,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אופיר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אופק_חברים_חתן_23",
@@ -290,7 +313,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אופק",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אור_ותמיר_משפחה_תוספות_24",
@@ -302,7 +326,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אור ותמיר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אור_ירון_חברים_חתן_25",
@@ -314,7 +339,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אור ירון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אור_כהן_חברים_חתן_26",
@@ -326,7 +352,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אור כהן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אוראל_אוזן_חברים_כלה_27",
@@ -338,7 +365,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אוראל אוזן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אוראל_אלמקייס_חברים_חתן_28",
@@ -350,7 +378,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אוראל אלמקייס",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אורה_ורביבו_מלול_משפחה_אבא_כלה_29",
@@ -362,7 +391,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אורה ורביבו מלול",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אורי_דרוקר_משרד_אבא_30",
@@ -374,7 +404,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אורי דרוקר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אורית_משפחה_תוספות_31",
@@ -386,7 +417,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אורית",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אורית_חרש_משרד_אבא_32",
@@ -398,7 +430,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אורית חרש",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אורלי_ואופיר_הלד_משפחה_תוספות_33",
@@ -410,7 +443,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אורלי ואופיר הלד",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אורלי_ורמי_גואטה_חברים_הורים_34",
@@ -422,7 +456,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אורלי ורמי גואטה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אורלי_פורטה_משפחה_אמא_כלה_35",
@@ -434,7 +469,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אורלי פורטה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אורן_אדוט_חברים_כלה_36",
@@ -446,7 +482,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "אורן אדוט",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אורנה_ומוריס_סבח_משרד_אבא_37",
@@ -458,7 +495,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אורנה ומוריס סבח",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אושרי_אקוקה_משפחה_אמא_כלה_38",
@@ -470,7 +508,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "אושרי אקוקה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אח_של_ברק_חברים_חתן_39",
@@ -482,7 +521,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אח של ברק",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אייל_ובת_זוגו_משפחה_קרובה_40",
@@ -494,7 +534,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אייל ובת זוגו",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אייל_צדקיהו_ובת_זוגו_משרד_אבא_41",
@@ -506,7 +547,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אייל צדקיהו ובת זוגו",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אילן_משרד_אבא_42",
@@ -518,7 +560,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אילן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אילן_וענת_גבסו_(עדי_וגל+?)_משפחה_קרובה_43",
@@ -530,7 +573,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אילן וענת גבסו (עדי וגל+?)",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אילן_ושירית_חורש_משפחה_יהודית_44",
@@ -542,7 +586,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אילן ושירית חורש",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אילן_יפרח_חברים_חתן_45",
@@ -554,7 +599,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אילן יפרח",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אילן_פחימה_משפחה_אבא_כלה_46",
@@ -566,7 +612,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אילן פחימה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אילנה_ארבל_משפחה_אמא_כלה_47",
@@ -578,7 +625,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אילנה ארבל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אילנה_זרוק_משפחה_אבא_כלה_48",
@@ -590,7 +638,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אילנה זרוק",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אילנית_סרור_חברים_כלה_49",
@@ -602,7 +651,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אילנית סרור",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_איסמעיל_משרד_אבא_50",
@@ -614,7 +664,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "איסמעיל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_איריס_משרד_אבא_51",
@@ -626,7 +677,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "איריס",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_איתי_דומפרוכט_חברים_חתן_52",
@@ -638,7 +690,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "איתי דומפרוכט",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אלי_חברים_חתן_53",
@@ -650,7 +703,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אלי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אלי_ומאי_קשתי_חברים_חתן_54",
@@ -662,7 +716,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אלי ומאי קשתי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אלי_מויאל_משפחה_אבא_כלה_55",
@@ -674,7 +729,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אלי מויאל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אלירן_אדרי_חברים_חתן_56",
@@ -686,7 +742,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אלירן אדרי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אלירן_דינה_חברים_חתן_57",
@@ -698,7 +755,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אלירן דינה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אלמוג_חברים_חתן_58",
@@ -710,7 +768,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אלמוג",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אלמוג_קניון_חברים_חתן_59",
@@ -722,7 +781,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אלמוג קניון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אמילי_גומברג_חברים_כלה_60",
@@ -734,7 +794,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אמילי גומברג",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אמילי_גנדלינג_חברים_כלה_61",
@@ -746,7 +807,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אמילי גנדלינג",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אנה_מדמוני_משפחה_אמא_כלה_62",
@@ -758,7 +820,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אנה מדמוני",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אסד_משרד_אבא_63",
@@ -770,7 +833,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אסד",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אסי_חרש_משרד_אבא_64",
@@ -782,7 +846,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אסי חרש",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אסנת_וגבריאל_הורים_חתן_65",
@@ -794,7 +859,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אסנת וגבריאל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אסף_ויצמן_משפחה_אמא_כלה_66",
@@ -806,7 +872,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אסף ויצמן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אסף_לוי_חברים_חתן_67",
@@ -818,7 +885,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אסף לוי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אסתי_זמלר_חברים_הורים_68",
@@ -830,7 +898,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אסתי זמלר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אפי_קלפון_משפחה_אמא_כלה_69",
@@ -842,7 +911,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "אפי קלפון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אפיק_חכם_משפחה_אמא_כלה_70",
@@ -854,7 +924,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אפיק חכם",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אפיק_סרור_חברים_כלה_71",
@@ -866,7 +937,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אפיק סרור",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ארז_מוגרבי_חברים_חתן_72",
@@ -878,7 +950,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ארז מוגרבי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אריאל_וקנין_חברים_חתן_73",
@@ -890,7 +963,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אריאל וקנין",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אשר_גרסיה_משפחה_אמא_כלה_74",
@@ -902,7 +976,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "אשר גרסיה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אשר_פריינטה_משפחה_אמא_כלה_75",
@@ -914,7 +989,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אשר פריינטה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אתי_בן_צבי_משפחה_אבא_כלה_76",
@@ -926,7 +1002,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אתי בן צבי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אתי_ואיציק_משפחה_יוסף_77",
@@ -938,7 +1015,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "אתי ואיציק",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_אתי_יפרח_הרוש_משפחה_אבא_כלה_78",
@@ -950,7 +1028,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "אתי יפרח הרוש",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_בובה_משפחה_יהודית_79",
@@ -962,7 +1041,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "בובה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_בוסי_חברים_חתן_80",
@@ -974,7 +1054,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "בוסי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_בועז_ברנדוביאן_תוספות_עבודה_81",
@@ -986,7 +1067,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "בועז ברנדוביאן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_בן_תוספות_משרד_82",
@@ -998,7 +1080,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "בן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_בן_וגפן_גולד_חברים_חתן_83",
@@ -1010,7 +1093,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "בן וגפן גולד",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_בן_ומיכל_בריגה_חברים_חתן_84",
@@ -1022,7 +1106,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "בן ומיכל בריגה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_בן_וניצן_רמז_חברים_חתן_85",
@@ -1034,7 +1119,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "בן וניצן רמז",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_בן_עזריה_חברים_חתן_86",
@@ -1046,7 +1132,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "בן עזריה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_בן_שלום_משפחה_אבא_כלה_87",
@@ -1058,7 +1145,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "בן שלום",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_בר_אורן_חברים_חתן_88",
@@ -1070,7 +1158,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "בר אורן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_בר_ויריב_משפחה_תוספות_89",
@@ -1082,7 +1171,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "בר ויריב",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_בר_זרוק_משפחה_אבא_כלה_90",
@@ -1094,7 +1184,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "בר זרוק",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_בר_טולדנו_חברים_חתן_91",
@@ -1106,7 +1197,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "בר טולדנו",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_בר_קזס_חברים_חתן_92",
@@ -1118,7 +1210,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "בר קזס",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ברוך_ורוית_רובין_משפחה_אמא_כלה_93",
@@ -1130,7 +1223,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ברוך ורוית רובין",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ברק_גרוסמן_חברים_חתן_94",
@@ -1142,7 +1236,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "ברק גרוסמן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ברק_דשתי_חברים_חתן_95",
@@ -1154,7 +1249,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ברק דשתי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_בת_אל_ניסים_משפחה_אמא_כלה_96",
@@ -1166,7 +1262,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "בת אל ניסים",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ג'ולי_ונחשון_משפחה_קרובה_97",
@@ -1178,7 +1275,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ג'ולי ונחשון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_גבי_ומיטל_משפחה_יוסף_98",
@@ -1190,7 +1288,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "גבי ומיטל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_גיא_ודנה_צפני_חברים_חתן_99",
@@ -1202,7 +1301,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "גיא ודנה צפני",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_גיא_חן_משפחה_אמא_כלה_100",
@@ -1214,7 +1314,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "גיא חן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_גיא_רוסו_חברים_חתן_101",
@@ -1226,7 +1327,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "גיא רוסו",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_גייקוב_ויובל_ישראל_חברים_חתן_102",
@@ -1238,7 +1340,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "גייקוב ויובל ישראל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_גיל_דלל_חברים_חתן_103",
@@ -1250,7 +1353,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "גיל דלל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_גילי_ויסמין_משפחה_קרובה_104",
@@ -1262,7 +1366,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "גילי ויסמין",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_גל_אחזקה_תוספות_עבודה_105",
@@ -1274,7 +1379,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "גל אחזקה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_גל_וחן_משפחה_קרובה_106",
@@ -1286,7 +1392,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "גל וחן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_גל_ומיקי_משפחה_קרובה_107",
@@ -1298,7 +1405,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "גל ומיקי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_גלי_תוספות_משרד_108",
@@ -1310,7 +1418,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "גלי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_גלית_ואבי_דילר_משפחה_יהודית_109",
@@ -1322,7 +1431,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "גלית ואבי דילר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_גלמידי_חברים_חתן_110",
@@ -1334,7 +1444,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "גלמידי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דבורה_זומר_חברים_חתן_111",
@@ -1346,7 +1457,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "דבורה זומר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דביר_משרד_אבא_112",
@@ -1358,7 +1470,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דביר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דגנית_משפחה_תוספות_113",
@@ -1370,7 +1483,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דגנית",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דוד_בובליל_חברים_הורים_114",
@@ -1382,7 +1496,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דוד בובליל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דוד_ואנונו_משרד_אבא_115",
@@ -1394,7 +1509,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דוד ואנונו",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דודו_תוספות_משרד_116",
@@ -1406,7 +1522,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "דודו",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דודו_ולין_יוסף_חברים_חתן_117",
@@ -1418,7 +1535,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דודו ולין יוסף",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דודי_גרו_משפחה_אמא_כלה_118",
@@ -1430,7 +1548,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דודי גרו",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דודי_וגליה_כהן_חברים_הורים_119",
@@ -1442,7 +1561,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "דודי וגליה כהן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דודי_לוסקי_חברים_חתן_120",
@@ -1454,7 +1574,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דודי לוסקי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דור_וליאור_ליאני_חברים_חתן_121",
@@ -1466,7 +1587,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דור וליאור ליאני",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דור_טולדנו_חברים_חתן_122",
@@ -1478,7 +1600,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דור טולדנו",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דור_ליבנט_משרד_אבא_123",
@@ -1490,7 +1613,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "דור ליבנט",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דור_מעודד_חברים_חתן_124",
@@ -1502,7 +1626,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דור מעודד",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דור_שמואל_חברים_חתן_125",
@@ -1514,7 +1639,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דור שמואל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דימה_פריטולה_חברים_חתן_126",
@@ -1526,7 +1652,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דימה פריטולה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דליה_משפחה_יוסף_127",
@@ -1538,7 +1665,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דליה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דליה_ויונתן_הורים_כלה_128",
@@ -1550,7 +1678,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דליה ויונתן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דליה_יפרח_משפחה_אבא_כלה_129",
@@ -1562,7 +1691,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דליה יפרח",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דלילה_ומומי_משפחה_יהודית_130",
@@ -1574,7 +1704,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דלילה ומומי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דן_ליבנט_משרד_אבא_131",
@@ -1586,7 +1717,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דן ליבנט",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דנה_ברמלי_שכנים_132",
@@ -1598,7 +1730,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דנה ברמלי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דנה_גבסו_משפחה_תוספות_133",
@@ -1610,7 +1743,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דנה גבסו",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דנה_ושליו_צור_חברים_חתן_134",
@@ -1622,7 +1756,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דנה ושליו צור",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דני_נבון_משפחה_אבא_כלה_135",
@@ -1634,7 +1769,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דני נבון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דני_פחימה_משפחה_אבא_כלה_136",
@@ -1646,7 +1782,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דני פחימה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דני_קלפון_משפחה_אמא_כלה_137",
@@ -1658,7 +1795,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דני קלפון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דניאל_אלגמיש_חברים_חתן_138",
@@ -1670,7 +1808,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דניאל אלגמיש",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דניאל_בדלי_חברים_חתן_139",
@@ -1682,7 +1821,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דניאל בדלי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דניאל_ואלינור_קופמן_חברים_חתן_140",
@@ -1694,7 +1834,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דניאל ואלינור קופמן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דניאל_וספיר_כספי_חברים_חתן_141",
@@ -1706,7 +1847,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דניאל וספיר כספי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דניאל_טוויל_חברים_חתן_142",
@@ -1718,7 +1860,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דניאל טוויל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דניאל_כוזהינוף_חברים_כלה_143",
@@ -1730,7 +1873,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "דניאל כוזהינוף",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דניאל_עובד_חברים_חתן_144",
@@ -1742,7 +1886,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "דניאל עובד",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דניאל_עיני_חברים_חתן_145",
@@ -1754,7 +1899,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דניאל עיני",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דניאל_רפאל_חברים_כלה_146",
@@ -1766,7 +1912,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דניאל רפאל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דקלה_ושמעון_אמויאל_משפחה_קרובה_147",
@@ -1778,7 +1925,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דקלה ושמעון אמויאל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דרור_ואלמוג_משפחה_תוספות_148",
@@ -1790,7 +1938,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דרור ואלמוג",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_דרורה_מחלב_משפחה_אמא_כלה_149",
@@ -1802,7 +1951,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "דרורה מחלב",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_הדס_משפחה_תוספות_150",
@@ -1814,7 +1964,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "הדס",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_הודיה_כהן_חברים_כלה_151",
@@ -1826,7 +1977,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "הודיה כהן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_הילה_ואדם_משפחה_יהודית_152",
@@ -1838,7 +1990,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "הילה ואדם",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_וואן_תוספות_משרד_153",
@@ -1850,7 +2003,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "וואן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_וידאל_משפחה_תוספות_154",
@@ -1862,7 +2016,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "וידאל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_זאקי_ואשתו-הורים_של_שלי_שלי_משפחה_אבא_כלה_155",
@@ -1874,7 +2029,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "זאקי ואשתו-הורים של שלי שלי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_זהבה_משפחה_אבא_כלה_156",
@@ -1886,7 +2042,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "זהבה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_זורזיט_משפחה_אבא_כלה_157",
@@ -1898,7 +2055,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "זורזיט",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_חזי_חברים_חתן_158",
@@ -1910,7 +2068,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "חזי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_חזי_מנה\"פ_בת_ים_משרד_אבא_159",
@@ -1922,7 +2081,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "חזי מנה\"פ בת ים",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_חיים_ועדי_משפחה_יוסף_160",
@@ -1934,7 +2094,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "חיים ועדי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_חיים_ענת_גבסו_משפחה_קרובה_161",
@@ -1946,7 +2107,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "חיים ענת גבסו",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_חלי_ואבי_אזולאי_משפחה_יהודית_162",
@@ -1958,7 +2120,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "חלי ואבי אזולאי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_חמוטל_משפחה_אמא_כלה_163",
@@ -1970,7 +2133,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "חמוטל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_חן_שמיל_חברים_כלה_164",
@@ -1982,7 +2146,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "חן שמיל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_חנה_חנדגאוקר_משפחה_אמא_כלה_165",
@@ -1994,7 +2159,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "חנה חנדגאוקר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_חנה_פרחי_משפחה_אמא_כלה_166",
@@ -2006,7 +2172,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "חנה פרחי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_חנה_רפאל_משפחה_אמא_כלה_167",
@@ -2018,7 +2185,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "חנה רפאל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_חני_סובול_משפחה_אמא_כלה_168",
@@ -2030,7 +2198,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "חני סובול",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_חננאל_ואסתי_מקלב_משפחה_אמא_כלה_169",
@@ -2042,7 +2211,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "חננאל ואסתי מקלב",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_טובי_זילברמן_משפחה_קרובה_170",
@@ -2054,7 +2224,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "טובי זילברמן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_טום_אסא_?_חברים_חתן_171",
@@ -2066,7 +2237,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "טום אסא ?",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_טום_בורן_חברים_כלה_172",
@@ -2078,7 +2250,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "טום בורן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_טום_עובדיה_חברים_כלה_173",
@@ -2090,7 +2263,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "טום עובדיה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_טום_שירי_חברים_חתן_174",
@@ -2102,7 +2276,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "טום שירי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_טילדה_ברדוגו_משפחה_אמא_כלה_175",
@@ -2114,7 +2289,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "טילדה ברדוגו",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_טל_משפחה_תוספות_176",
@@ -2126,7 +2302,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "טל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_טל_וולקוביץ_משפחה_אמא_כלה_177",
@@ -2138,7 +2315,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "טל וולקוביץ",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_טל_וחן_אלמקייס_חברים_חתן_178",
@@ -2150,7 +2328,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "טל וחן אלמקייס",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_טל_קראדי_חברים_כלה_179",
@@ -2162,7 +2341,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "טל קראדי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יאנה_גרוס_חברים_כלה_180",
@@ -2174,7 +2354,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יאנה גרוס",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יגאל_משרד_אבא_181",
@@ -2186,7 +2367,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יגאל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יהודה_ומינה_מרון_חברים_הורים_182",
@@ -2198,7 +2380,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יהודה ומינה מרון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יהודית_טולדנו_משפחה_אמא_כלה_183",
@@ -2210,7 +2393,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יהודית טולדנו",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יהושוע_וסוניה_פחימה_משפחה_אבא_כלה_184",
@@ -2222,7 +2406,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יהושוע וסוניה פחימה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יהושוע_פחימה_משפחה_אבא_כלה_185",
@@ -2234,7 +2419,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יהושוע פחימה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יהל_נדב_משפחה_אמא_כלה_186",
@@ -2246,7 +2432,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יהל נדב",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יובל_בן_אבו_משפחה_אמא_כלה_187",
@@ -2258,7 +2445,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יובל בן אבו",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יובל_ויעל_רפאל_משרד_אבא_188",
@@ -2270,7 +2458,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יובל ויעל רפאל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יובל_כפרי_משפחה_אמא_כלה_189",
@@ -2282,7 +2471,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יובל כפרי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יובל_פסח_משרד_אבא_190",
@@ -2294,7 +2484,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יובל פסח",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יובל_קמפה_חברים_חתן_191",
@@ -2306,7 +2497,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יובל קמפה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יוליה_ברלוביץ_משפחה_אמא_כלה_192",
@@ -2318,7 +2510,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יוליה ברלוביץ",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יונה_ארזי_חברים_כלה_193",
@@ -2330,7 +2523,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יונה ארזי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יוסי_משרד_אבא_194",
@@ -2342,7 +2536,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יוסי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יוסי_ומלכה_מזרחי_חברים_הורים_195",
@@ -2354,7 +2549,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יוסי ומלכה מזרחי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יוסי_ורוי_חברים_הורים_196",
@@ -2366,7 +2562,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יוסי ורוי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יוסי_לוי_חברים_חתן_197",
@@ -2378,7 +2575,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יוסי לוי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יוסי_קינן_משרד_אבא_198",
@@ -2390,7 +2588,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יוסי קינן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יורם_משרד_אבא_199",
@@ -2402,7 +2601,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יורם",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יחיאל_בן_יעקב_משפחה_אבא_כלה_200",
@@ -2414,7 +2614,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יחיאל בן יעקב",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ים_זוהר_חברים_כלה_201",
@@ -2426,7 +2627,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ים זוהר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יניב_ואירוס_יעקובי_משרד_אבא_202",
@@ -2438,7 +2640,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יניב ואירוס יעקובי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יעל_אביטן_חברים_כלה_203",
@@ -2450,7 +2653,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יעל אביטן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יערה_ושחף_משפחה_תוספות_204",
@@ -2462,7 +2666,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יערה ושחף",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יערה_לוי_משפחה_אמא_כלה_205",
@@ -2474,7 +2679,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יערה לוי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יפה_בן_אבו_משפחה_אמא_כלה_206",
@@ -2486,7 +2692,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יפה בן אבו",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יפה_וגדעון_קרן_משפחה_תוספות_207",
@@ -2498,7 +2705,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יפה וגדעון קרן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_יפה_סידי_משפחה_יהודית_208",
@@ -2510,7 +2718,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "יפה סידי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ירדן_אגוז_חברים_חתן_209",
@@ -2522,7 +2731,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ירדן אגוז",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ירדן_ודניאל_גואטה_חברים_חתן_210",
@@ -2534,7 +2744,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ירדן ודניאל גואטה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ירדן_וקרן_משפחה_תוספות_211",
@@ -2546,7 +2757,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ירדן וקרן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ירדן_שרייבר_חברים_כלה_212",
@@ -2558,7 +2770,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ירדן שרייבר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ירין_בניטה_חברים_כלה_213",
@@ -2570,7 +2783,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "ירין בניטה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ירין_ישראל_טוב_חברים_חתן_214",
@@ -2582,7 +2796,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ירין ישראל טוב",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ירין_מור_חברים_כלה_215",
@@ -2594,7 +2809,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ירין מור",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ירמי_ובת_זוגו_מזרחי_חברים_הורים_216",
@@ -2606,7 +2822,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ירמי ובת זוגו מזרחי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_כוכב_חברים_חתן_217",
@@ -2618,7 +2835,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "כוכב",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_לאה_ואברם_משה_משפחה_יהודית_218",
@@ -2630,7 +2848,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "לאה ואברם משה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_לביא_משפחה_תוספות_219",
@@ -2642,7 +2861,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "לביא",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_לוי_וחני_זיסמן_משפחה_קרובה_220",
@@ -2654,7 +2874,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "לוי וחני זיסמן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_לורן_גראד_(בתדודה_מאי)_חברים_כלה_221",
@@ -2666,7 +2887,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "לורן גראד (בתדודה מאי)",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ליאב_שמן_חברים_חתן_222",
@@ -2678,7 +2900,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ליאב שמן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ליאור_ברטובסקי_חברים_חתן_223",
@@ -2690,7 +2913,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ליאור ברטובסקי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ליאור_זרוק_משפחה_אבא_כלה_224",
@@ -2702,7 +2926,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ליאור זרוק",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ליאור_פור_חברים_חתן_225",
@@ -2714,7 +2939,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ליאור פור",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ליאור_תורג'מן_חברים_כלה_226",
@@ -2726,7 +2952,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ליאור תורג'מן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ליאם_חזן_חברים_חתן_227",
@@ -2738,10 +2965,11 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ליאם חזן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
-      "id": "guest_ליאת_משפחה_אבא_כלה_228",
+      "id": "guest_ליאת_משרד_אבא_229",
       "name": "ליאת",
       "approved": 1,
       "invited": 1,
@@ -2750,7 +2978,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ליאת",
-      "statusFlag": "new_arrival"
+      "statusFlag": "updated_count",
+      "previousApproved": 0
     },
     {
       "id": "guest_ליאת_משרד_אבא_229",
@@ -2762,7 +2991,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "ליאת",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ליאת_ואופיר_אחות_230",
@@ -2774,7 +3004,8 @@
       "hasNotes": false,
       "uiExtra": "3",
       "rawName": "+ 3ליאת ואופיר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ליהי_ברכה_חברים_כלה_231",
@@ -2786,7 +3017,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ליהי ברכה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ליהיא_גוטלון_חברים_כלה_232",
@@ -2798,7 +3030,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "ליהיא גוטלון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ליהיא_שרייבר_חברים_כלה_233",
@@ -2810,7 +3043,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ליהיא שרייבר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ליז_ציפורניים_חברים_כלה_234",
@@ -2822,7 +3056,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ליז ציפורניים",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_לילך_אוחיון_(סקורה)_חברים_כלה_235",
@@ -2834,7 +3069,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "לילך אוחיון (סקורה)",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_לילך_וזאב_סולומון_משפחה_קרובה_236",
@@ -2846,7 +3082,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "לילך וזאב סולומון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_לין_וגאן_חברים_כלה_237",
@@ -2858,7 +3095,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "לין וגאן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_לין_רפאלי_חברים_כלה_238",
@@ -2870,7 +3108,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "לין רפאלי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_לינוי_הררי_חברים_כלה_239",
@@ -2882,7 +3121,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "לינוי הררי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_לינוי_מיוחס_חברים_כלה_240",
@@ -2894,7 +3134,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "לינוי מיוחס",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_לינוי_סרור_חברים_כלה_241",
@@ -2906,7 +3147,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "לינוי סרור",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ליפז_עופרים_?_חברים_חתן_242",
@@ -2918,7 +3160,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "ליפז עופרים ?",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ליצי_משפחה_תוספות_243",
@@ -2930,7 +3173,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ליצי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_לירון_חברים_חתן_244",
@@ -2942,7 +3186,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "לירון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_לירון_יוסף_חברים_חתן_245",
@@ -2954,7 +3199,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "לירון יוסף",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_לירן_משפחה_תוספות_246",
@@ -2966,7 +3212,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "לירן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מאור_ואור_חנום_חברים_חתן_247",
@@ -2978,7 +3225,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "מאור ואור חנום",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מאור_מהנדס_משרד_אבא_248",
@@ -2990,7 +3238,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "מאור מהנדס",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מאור_עובדיה_חברים_כלה_249",
@@ -3002,7 +3251,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מאור עובדיה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מאי_זדה_חברים_כלה_250",
@@ -3014,7 +3264,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "מאי זדה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מאי_סרור_חברים_כלה_251",
@@ -3026,7 +3277,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מאי סרור",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מאיר_תוספות_משרד_252",
@@ -3038,7 +3290,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מאיר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מארק_עבודה_אבי_משרד_אבא_253",
@@ -3050,7 +3303,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מארק עבודה אבי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מוחמד_פאהז_משרד_אבא_254",
@@ -3062,7 +3316,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מוחמד פאהז",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מוטי_ומלכה_בן-בסט_משפחה_קרובה_255",
@@ -3074,7 +3329,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "מוטי ומלכה בן-בסט",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מור_אסף_אלוויה_משפחה_יהודית_256",
@@ -3086,7 +3342,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מור אסף אלוויה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מור_יוסיפוב_חברים_כלה_257",
@@ -3098,7 +3355,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מור יוסיפוב",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מור_ימין_חברים_כלה_258",
@@ -3110,7 +3368,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מור ימין",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מור_מלכה_חברים_חתן_259",
@@ -3122,7 +3381,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מור מלכה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מוריה_פרידמן_משפחה_אמא_כלה_260",
@@ -3134,7 +3394,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "מוריה פרידמן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מוריס_גבאי_משפחה_אבא_כלה_261",
@@ -3146,7 +3407,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מוריס גבאי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מורן_פרץ_חברים_כלה_262",
@@ -3158,7 +3420,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "מורן פרץ",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מושון_ומור_ביטון_חברים_חתן_263",
@@ -3170,7 +3433,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מושון ומור ביטון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מייסי_קשתי_חברים_כלה_264",
@@ -3182,7 +3446,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מייסי קשתי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מיכאל_משרד_אבא_265",
@@ -3194,7 +3459,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מיכאל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מיכאל_ואלמוג_זמרוני_חברים_חתן_266",
@@ -3206,7 +3472,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מיכאל ואלמוג זמרוני",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מיכאל_וניצן_באזוב_חברים_חתן_267",
@@ -3218,7 +3485,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מיכאל וניצן באזוב",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מיכל_ואילן_אשכנזי_משפחה_קרובה_268",
@@ -3230,7 +3498,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מיכל ואילן אשכנזי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מימי_גבאי_משפחה_אבא_כלה_269",
@@ -3242,7 +3511,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מימי גבאי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מינו_וחיה_עביטה_משפחה_יהודית_270",
@@ -3254,7 +3524,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מינו וחיה עביטה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מירב_גורן_משפחה_אמא_כלה_271",
@@ -3266,7 +3537,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מירב גורן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מירב_מור_משרד_אבא_272",
@@ -3278,7 +3550,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "מירב מור",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מירו_ונתי_אבטה_משפחה_יהודית_273",
@@ -3290,7 +3563,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מירו ונתי אבטה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מיתר_סלוניקי_חברים_כלה_274",
@@ -3302,7 +3576,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "מיתר סלוניקי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מלי_ורוני_משפחה_יהודית_275",
@@ -3314,31 +3589,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מלי ורוני",
-      "statusFlag": "new_arrival"
-    },
-    {
-      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_276",
-      "name": "מני בן הרוש",
-      "approved": 0,
-      "invited": 1,
-      "group": "משפחה אבא כלה",
-      "hasPhone": "Yes/Unknown",
-      "hasNotes": true,
-      "uiExtra": "",
-      "rawName": "מני בן הרוש",
-      "statusFlag": "new_arrival"
-    },
-    {
-      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_277",
-      "name": "מני בן הרוש",
-      "approved": 0,
-      "invited": 1,
-      "group": "משפחה אבא כלה",
-      "hasPhone": "Yes/Unknown",
-      "hasNotes": false,
-      "uiExtra": "",
-      "rawName": "מני בן הרוש",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_278",
@@ -3350,7 +3602,34 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "מני בן הרוש",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
+    },
+    {
+      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_278",
+      "name": "מני בן הרוש",
+      "approved": 0,
+      "invited": 1,
+      "group": "משפחה אבא כלה",
+      "hasPhone": "Yes/Unknown",
+      "hasNotes": false,
+      "uiExtra": "",
+      "rawName": "מני בן הרוש",
+      "statusFlag": "normal",
+      "previousApproved": null
+    },
+    {
+      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_278",
+      "name": "מני בן הרוש",
+      "approved": 0,
+      "invited": 1,
+      "group": "משפחה אבא כלה",
+      "hasPhone": "Yes/Unknown",
+      "hasNotes": true,
+      "uiExtra": "",
+      "rawName": "מני בן הרוש",
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מני_גבאי_משפחה_אבא_כלה_279",
@@ -3362,7 +3641,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מני גבאי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מני_פריינטה_משפחה_אמא_כלה_280",
@@ -3374,7 +3654,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "מני פריינטה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מנשה_ג'אנה_משרד_אבא_281",
@@ -3386,7 +3667,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מנשה ג'אנה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מנשה_וניצה_משה_משפחה_יהודית_282",
@@ -3398,7 +3680,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "מנשה וניצה משה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מקסים_מלול_משפחה_אבא_כלה_283",
@@ -3410,7 +3693,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מקסים מלול",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מרגו_ומאיר_אלקריף_משפחה_אמא_כלה_284",
@@ -3422,7 +3706,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מרגו ומאיר אלקריף",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_משה_,חביבה,_ליאון_,_טליה_קלפון_משפחה_אמא_כלה_285",
@@ -3434,7 +3719,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "משה ,חביבה, ליאון , טליה קלפון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_משה_דרוקר_משרד_אבא_286",
@@ -3446,10 +3732,11 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "משה דרוקר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
-      "id": "guest_מתן_חברים_חתן_287",
+      "id": "guest_מתן_משפחה_תוספות_288",
       "name": "מתן",
       "approved": 0,
       "invited": 1,
@@ -3458,7 +3745,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מתן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "updated_count",
+      "previousApproved": 1
     },
     {
       "id": "guest_מתן_משפחה_תוספות_288",
@@ -3470,7 +3758,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מתן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מתן_ושחף_סוקולר_חברים_חתן_289",
@@ -3482,7 +3771,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מתן ושחף סוקולר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_מתן_מרציאנו_חברים_חתן_290",
@@ -3494,7 +3784,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "מתן מרציאנו",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_נאור_חברים_חתן_291",
@@ -3506,7 +3797,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "נאור",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_נווה_בוארון_חברים_חתן_292",
@@ -3518,7 +3810,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "נווה בוארון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_נוי_ביבי_חברים_כלה_293",
@@ -3530,7 +3823,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "נוי ביבי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_נויה_משפחה_תוספות_294",
@@ -3542,7 +3836,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "נויה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_נועם_לנקרי_חברים_כלה_295",
@@ -3554,7 +3849,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "נועם לנקרי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_נועם_מור_יוסף_חברים_כלה_296",
@@ -3566,7 +3862,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "נועם מור יוסף",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_נטלי_משפחה_אמא_כלה_297",
@@ -3578,7 +3875,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "נטלי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_נטלי_יוסף_חברים_כלה_298",
@@ -3590,7 +3888,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "נטלי יוסף",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_נידאל_משרד_אבא_299",
@@ -3602,7 +3901,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "נידאל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ניסים_בן_הרוש_משפחה_אבא_כלה_300",
@@ -3614,7 +3914,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ניסים בן הרוש",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ניר_וספיר_אדרי_חברים_חתן_301",
@@ -3626,7 +3927,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ניר וספיר אדרי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ניר_לוזון_חברים_חתן_302",
@@ -3638,7 +3940,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "ניר לוזון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_נירה_אגמי_משרד_אבא_303",
@@ -3650,7 +3953,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "נירה אגמי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_נעמה_משפחה_אבא_כלה_304",
@@ -3662,7 +3966,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "נעמה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_נתי_חברים_חתן_305",
@@ -3674,7 +3979,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "נתי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_נתי_ועמית_סלמן_חברים_חתן_306",
@@ -3686,7 +3992,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "נתי ועמית סלמן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_סבתא_הרטה_משפחה_תוספות_307",
@@ -3698,7 +4005,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "סבתא הרטה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_סהר_אלמקייס_חברים_חתן_308",
@@ -3710,7 +4018,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "סהר אלמקייס",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_סוניה_סנדה_חברים_כלה_309",
@@ -3722,7 +4031,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "סוניה סנדה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_סיוון_כהן_חברים_כלה_310",
@@ -3734,7 +4044,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "סיוון כהן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_סימון_חביב_חברים_כלה_311",
@@ -3746,7 +4057,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "סימון חביב",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_סמדר_משרד_אבא_312",
@@ -3758,7 +4070,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "סמדר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_סמי_תוספות_משרד_313",
@@ -3770,7 +4083,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "סמי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ספי_ותמר_לוי_חברים_חתן_314",
@@ -3782,7 +4096,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ספי ותמר לוי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ספיר_משפחה_קרובה_315",
@@ -3794,7 +4109,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ספיר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ספיר_ג'אנה_חברים_כלה_316",
@@ -3806,7 +4122,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "ספיר ג'אנה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_סקג׳ו_חברים_חתן_317",
@@ -3818,7 +4135,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "סקג׳ו",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עדי_ושרון_משפחה_קרובה_318",
@@ -3830,7 +4148,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עדי ושרון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עדי_פלג_חברים_כלה_319",
@@ -3842,7 +4161,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עדי פלג",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עדי_שלום_משפחה_אבא_כלה_320",
@@ -3854,7 +4174,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עדי שלום",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עדן_אברמוב_חברים_כלה_321",
@@ -3866,7 +4187,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עדן אברמוב",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עדן_בדוסה_חברים_חתן_322",
@@ -3878,7 +4200,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עדן בדוסה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עדן_דרעי_חברים_חתן_323",
@@ -3890,7 +4213,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עדן דרעי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עדן_ואופיר_שוקיאן_חברים_חתן_324",
@@ -3902,7 +4226,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עדן ואופיר שוקיאן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עדן_לאטי_חברים_חתן_325",
@@ -3914,7 +4239,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "עדן לאטי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עדן_פרנקו_חברים_כלה_326",
@@ -3926,7 +4252,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עדן פרנקו",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עדנה_מלול_משפחה_אמא_כלה_327",
@@ -3938,7 +4265,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עדנה מלול",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עודד_אמיתי_חברים_חתן_328",
@@ -3950,7 +4278,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עודד אמיתי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עוז_מזרחי_חברים_חתן_329",
@@ -3962,7 +4291,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עוז מזרחי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עוז_נתן_חברים_חתן_330",
@@ -3974,7 +4304,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עוז נתן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עומר_אלטשטיין_משפחה_אמא_כלה_331",
@@ -3986,7 +4317,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עומר אלטשטיין",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עומר_נעים_חברים_חתן_332",
@@ -3998,7 +4330,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עומר נעים",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עומרי_חברים_חתן_333",
@@ -4010,7 +4343,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עומרי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עזר_אגמי_משרד_אבא_334",
@@ -4022,7 +4356,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עזר אגמי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עידו_נבון_משפחה_אבא_כלה_335",
@@ -4034,7 +4369,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עידו נבון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עידו_נחום_משפחה_אמא_כלה_336",
@@ -4046,7 +4382,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עידו נחום",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עידו_ראבד_חברים_חתן_337",
@@ -4058,7 +4395,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עידו ראבד",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עידו_שוחט_חברים_חתן_338",
@@ -4070,7 +4408,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עידו שוחט",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עידן_דלל_חברים_חתן_339",
@@ -4082,7 +4421,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עידן דלל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עלי_משרד_אבא_340",
@@ -4094,7 +4434,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עלי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עליזה_משפחה_אמא_כלה_341",
@@ -4106,7 +4447,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עליזה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עמאר_ראשק_תוספות_משרד_342",
@@ -4118,10 +4460,11 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עמאר ראשק",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
-      "id": "guest_עמי_משפחה_תוספות_343",
+      "id": "guest_עמי_משפחה_תוספות_344",
       "name": "עמי",
       "approved": 0,
       "invited": 1,
@@ -4130,7 +4473,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עמי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "updated_count",
+      "previousApproved": 1
     },
     {
       "id": "guest_עמי_משפחה_תוספות_344",
@@ -4142,7 +4486,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עמי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עמי_גבסו_משפחה_קרובה_345",
@@ -4154,7 +4499,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עמי גבסו",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עמי_וקרן_ששון_משפחה_יהודית_346",
@@ -4166,7 +4512,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עמי וקרן ששון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עמי_חורש_משפחה_יהודית_347",
@@ -4178,7 +4525,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עמי חורש",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עמית_אלגלי_חברים_חתן_348",
@@ -4190,7 +4538,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עמית אלגלי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עמית_מויאל_חברים_חתן_349",
@@ -4202,7 +4551,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "עמית מויאל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עמית_פחימה_משפחה_אבא_כלה_350",
@@ -4214,7 +4564,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עמית פחימה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_עמית_רגב_חברים_חתן_351",
@@ -4226,7 +4577,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "עמית רגב",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_ענבר_ביטן_חברים_כלה_352",
@@ -4238,7 +4590,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "ענבר ביטן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_פז_פילואש_תוספות_עבודה_353",
@@ -4250,7 +4603,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "פז פילואש",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_פייגי_אילוז_חברים_חתן_354",
@@ -4262,7 +4616,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "פייגי אילוז",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_פלג_חברים_חתן_355",
@@ -4274,7 +4629,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "פלג",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_פרחי_חברים_חתן_356",
@@ -4286,7 +4642,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "פרחי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_פריסיליה_קשתי_חברים_חתן_357",
@@ -4298,7 +4655,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "פריסיליה קשתי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_צחי_ועידית_משפחה_תוספות_358",
@@ -4310,7 +4668,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "צחי ועידית",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_צליל_סלוניקי_חברים_כלה_359",
@@ -4322,7 +4681,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "צליל סלוניקי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_קארין_מועלם_חברים_חתן_360",
@@ -4334,7 +4694,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "קארין מועלם",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_קארין_קשתי_חברים_כלה_361",
@@ -4346,7 +4707,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "קארין קשתי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_קובי_וענבל_קרן_משפחה_תוספות_362",
@@ -4358,7 +4720,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "קובי וענבל קרן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_קווין_מיכאל_משפחה_אמא_כלה_363",
@@ -4370,7 +4733,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "קווין מיכאל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_קוקו_פחימה_משפחה_אבא_כלה_364",
@@ -4382,7 +4746,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "קוקו פחימה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_קורל_אבוטבול_חברים_כלה_365",
@@ -4394,7 +4759,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "קורל אבוטבול",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_קטי_וחיים_גנג'יאן_משפחה_אמא_כלה_366",
@@ -4406,7 +4772,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "קטי וחיים גנג'יאן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_קלרה_ודוד_בר_און_משפחה_אמא_כלה_367",
@@ -4418,7 +4785,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "קלרה ודוד בר און",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_קרין_פטישי_משפחה_אמא_כלה_368",
@@ -4430,7 +4798,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "קרין פטישי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רבקה_דואק_חברים_חתן_369",
@@ -4442,7 +4811,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רבקה דואק",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רגב_וירדן_אביטבול_חברים_חתן_370",
@@ -4454,7 +4824,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רגב וירדן אביטבול",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רגב_שלום_פלד_תוספות_עבודה_371",
@@ -4466,7 +4837,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רגב שלום פלד",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רויטל_יצחקי_משפחה_אמא_כלה_372",
@@ -4478,7 +4850,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רויטל יצחקי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רוית_לנגה_דגן_משפחה_אמא_כלה_373",
@@ -4490,7 +4863,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רוית לנגה דגן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רון_חי_חברים_חתן_374",
@@ -4502,7 +4876,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "רון חי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רוני_אורנשטיין_חברים_כלה_375",
@@ -4514,7 +4889,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רוני אורנשטיין",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רוני_סברלו_חברים_כלה_376",
@@ -4526,7 +4902,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רוני סברלו",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רונית_ואופיר_משפחה_קרובה_377",
@@ -4538,7 +4915,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רונית ואופיר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רונית_חדד_משפחה_יהודית_378",
@@ -4550,7 +4928,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רונית חדד",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רועי_משרד_אבא_379",
@@ -4562,7 +4941,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רועי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רועי_גבסו_חברים_חתן_380",
@@ -4574,7 +4954,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רועי גבסו",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רותי_שלום_משפחה_אבא_כלה_381",
@@ -4586,7 +4967,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רותי שלום",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רותם_וגלי_אלקובי_חברים_חתן_382",
@@ -4598,7 +4980,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רותם וגלי אלקובי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רותם_ולין_קורנר_חברים_חתן_383",
@@ -4610,7 +4993,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רותם ולין קורנר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רז_חברים_חתן_384",
@@ -4622,7 +5006,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רז",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רז_צור_חברים_חתן_385",
@@ -4634,7 +5019,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רז צור",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רחל_גרסיה_סעדון_משפחה_אמא_כלה_386",
@@ -4646,7 +5032,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רחל גרסיה סעדון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רחל_זביב_ומנחם_זביב_משפחה_אמא_כלה_387",
@@ -4658,7 +5045,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "רחל זביב ומנחם זביב",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רחלה_וויקטור_רובין_משפחה_אמא_כלה_388",
@@ -4670,7 +5058,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רחלה וויקטור רובין",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רינת_ונעם_משפחה_תוספות_389",
@@ -4682,7 +5071,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רינת ונעם",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רלי_ואביב_בן-דוד_משפחה_יהודית_390",
@@ -4694,7 +5084,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רלי ואביב בן-דוד",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רמי_ויעל_ליטמן_חברים_הורים_391",
@@ -4706,7 +5097,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רמי ויעל ליטמן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רמי_קלפון_משפחה_אמא_כלה_392",
@@ -4718,7 +5110,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רמי קלפון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רן_בריגה_חברים_חתן_393",
@@ -4730,7 +5123,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רן בריגה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רן_ברנשטיין_חברים_חתן_394",
@@ -4742,7 +5136,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "רן ברנשטיין",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רנה_דושי_חברים_חתן_395",
@@ -4754,7 +5149,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רנה דושי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רעות_משרד_אבא_396",
@@ -4766,7 +5162,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רעות",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_רעות_נבון_משפחה_אבא_כלה_397",
@@ -4778,7 +5175,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "רעות נבון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שבי_משפחה_יהודית_398",
@@ -4790,7 +5188,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שבי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שגיא_ודור_עטיה_חברים_חתן_399",
@@ -4802,7 +5201,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שגיא ודור עטיה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שגיא_וליאור_סלינס_חברים_חתן_400",
@@ -4814,7 +5214,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שגיא וליאור סלינס",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שובל_סוגאוקר_חברים_כלה_401",
@@ -4826,7 +5227,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שובל סוגאוקר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שובל_סומך_חברים_חתן_402",
@@ -4838,7 +5240,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שובל סומך",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שון_בן_הרוש_חברים_חתן_403",
@@ -4850,7 +5253,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שון בן הרוש",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שון_ושירה_רמז_חברים_חתן_404",
@@ -4862,7 +5266,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שון ושירה רמז",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שון_ושלי_מזרחי_חברים_חתן_405",
@@ -4874,7 +5279,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שון ושלי מזרחי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שושנה_משפחה_אבא_כלה_406",
@@ -4886,7 +5292,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שושנה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שחף_צוקר_חברים_כלה_407",
@@ -4898,7 +5305,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "שחף צוקר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שחר_חברים_חתן_408",
@@ -4910,7 +5318,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שחר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שחר_ואידית_זבדה_משרד_אבא_409",
@@ -4922,7 +5331,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שחר ואידית זבדה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שחר_ושי_משפחה_תוספות_410",
@@ -4934,7 +5344,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שחר ושי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שי_משפחה_יוסף_411",
@@ -4946,7 +5357,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שי_וספיר_נעמן_חברים_חתן_412",
@@ -4958,7 +5370,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שי וספיר נעמן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שי_סיבוני_חברים_כלה_413",
@@ -4970,7 +5383,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שי סיבוני",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שיר_בראשי_חברים_כלה_414",
@@ -4982,7 +5396,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שיר בראשי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שיר_וירין_ברנס_חברים_חתן_415",
@@ -4994,7 +5409,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שיר וירין ברנס",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שיר_חקים_חברים_כלה_416",
@@ -5006,7 +5422,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שיר חקים",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שיר_סלמן_חברים_חתן_417",
@@ -5018,7 +5435,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שיר סלמן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שירה_בוסי_חברים_כלה_418",
@@ -5030,7 +5448,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שירה בוסי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שירי_אלון_חברים_כלה_419",
@@ -5042,7 +5461,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שירי אלון",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שלומי_מלכה_חברים_כלה_420",
@@ -5054,7 +5474,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שלומי מלכה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שלומי_קור_חברים_חתן_421",
@@ -5066,7 +5487,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שלומי קור",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שלי_דרו_חברים_חתן_422",
@@ -5078,7 +5500,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שלי דרו",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שלי_ואייל_מיכאלי_משפחה_יהודית_423",
@@ -5090,7 +5513,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שלי ואייל מיכאלי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שם_טוב_מזרחי_חברים_חתן_424",
@@ -5102,7 +5526,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שם טוב מזרחי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שמואל_משפחה_אמא_כלה_425",
@@ -5114,7 +5539,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "שמואל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שמעון_לאור_שכנים_426",
@@ -5126,7 +5552,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שמעון לאור",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שמעון_פחימה_משפחה_אבא_כלה_427",
@@ -5138,7 +5565,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שמעון פחימה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שני_גישר_חברים_כלה_428",
@@ -5150,7 +5578,8 @@
       "hasNotes": true,
       "uiExtra": "",
       "rawName": "שני גישר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שני_רשף_חברים_כלה_429",
@@ -5162,7 +5591,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שני רשף",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שניר_שושנה_חברים_חתן_430",
@@ -5174,7 +5604,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שניר שושנה",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שקד_ונדב_משפחה_תוספות_431",
@@ -5186,7 +5617,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שקד ונדב",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שרון_דנן_חברים_חתן_432",
@@ -5198,7 +5630,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שרון דנן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שרון_יחזקאל_חברים_חתן_433",
@@ -5210,7 +5643,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שרון יחזקאל",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שרונה_ועמית_סלוביק_משפחה_יהודית_434",
@@ -5222,7 +5656,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שרונה ועמית סלוביק",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שרוני_משפחה_אבא_כלה_435",
@@ -5234,7 +5669,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שרוני",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שרי_יהב_משפחה_אמא_כלה_436",
@@ -5246,7 +5682,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שרי יהב",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_שרית_וניר_כהן_משרד_אבא_437",
@@ -5258,7 +5695,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "שרית וניר כהן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_תומר_משרד_אבא_438",
@@ -5270,7 +5708,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "תומר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_תומר_ששונקר_חברים_חתן_439",
@@ -5282,7 +5721,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "תומר ששונקר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_תמיר_חזן_חברים_חתן_440",
@@ -5294,7 +5734,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "תמיר חזן",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_תמיר_לוגסי_חברים_חתן_441",
@@ -5306,10 +5747,11 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "תמיר לוגסי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
-      "id": "guest_תמר_משפחה_תוספות_442",
+      "id": "guest_תמר_משרד_אבא_443",
       "name": "תמר",
       "approved": 1,
       "invited": 1,
@@ -5318,7 +5760,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "תמר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_תמר_משרד_אבא_443",
@@ -5330,7 +5773,8 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "תמר",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
     },
     {
       "id": "guest_תמר_אברהמי_משרד_אבא_444",
@@ -5342,7 +5786,80 @@
       "hasNotes": false,
       "uiExtra": "",
       "rawName": "תמר אברהמי",
-      "statusFlag": "new_arrival"
+      "statusFlag": "normal",
+      "previousApproved": null
+    },
+    {
+      "id": "guest_ליאת_משפחה_אבא_כלה_228",
+      "name": "ליאת",
+      "approved": 1,
+      "invited": 1,
+      "group": "משפחה אבא כלה",
+      "hasPhone": "Yes/Unknown",
+      "hasNotes": false,
+      "uiExtra": "",
+      "rawName": "ליאת",
+      "statusFlag": "normal"
+    },
+    {
+      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_276",
+      "name": "מני בן הרוש",
+      "approved": 0,
+      "invited": 1,
+      "group": "משפחה אבא כלה",
+      "hasPhone": "Yes/Unknown",
+      "hasNotes": true,
+      "uiExtra": "",
+      "rawName": "מני בן הרוש",
+      "statusFlag": "normal"
+    },
+    {
+      "id": "guest_מני_בן_הרוש_משפחה_אבא_כלה_277",
+      "name": "מני בן הרוש",
+      "approved": 0,
+      "invited": 1,
+      "group": "משפחה אבא כלה",
+      "hasPhone": "Yes/Unknown",
+      "hasNotes": false,
+      "uiExtra": "",
+      "rawName": "מני בן הרוש",
+      "statusFlag": "normal"
+    },
+    {
+      "id": "guest_מתן_חברים_חתן_287",
+      "name": "מתן",
+      "approved": 0,
+      "invited": 1,
+      "group": "חברים חתן",
+      "hasPhone": "Yes/Unknown",
+      "hasNotes": false,
+      "uiExtra": "",
+      "rawName": "מתן",
+      "statusFlag": "normal"
+    },
+    {
+      "id": "guest_עמי_משפחה_תוספות_343",
+      "name": "עמי",
+      "approved": 0,
+      "invited": 1,
+      "group": "משפחה תוספות",
+      "hasPhone": "Yes/Unknown",
+      "hasNotes": false,
+      "uiExtra": "",
+      "rawName": "עמי",
+      "statusFlag": "normal"
+    },
+    {
+      "id": "guest_תמר_משפחה_תוספות_442",
+      "name": "תמר",
+      "approved": 1,
+      "invited": 1,
+      "group": "משפחה תוספות",
+      "hasPhone": "Yes/Unknown",
+      "hasNotes": false,
+      "uiExtra": "",
+      "rawName": "תמר",
+      "statusFlag": "normal"
     }
   ],
   "assignments": [],
