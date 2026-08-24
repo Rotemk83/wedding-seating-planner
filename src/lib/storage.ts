@@ -142,13 +142,17 @@ export async function loadEventState(): Promise<{ state: EventState | null; sour
       headers['Authorization'] = `Bearer ${token}`;
     }
 
-    // Try serverless endpoint first
-    let res = await fetch('/api/state', { method: 'GET', headers }).catch(() => null);
+    // Try serverless endpoint first with cache-busting timestamp
+    let res = await fetch(`/api/state?t=${Date.now()}`, {
+      method: 'GET',
+      headers,
+      cache: 'no-store',
+    }).catch(() => null);
 
     // If serverless is 404/static (like on GitHub Pages), try fetching data/event-state.json directly from GitHub
     if (!res || !res.ok) {
-      const ghUrl = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/main/${FILE_PATH}`;
-      res = await fetch(ghUrl).catch(() => null);
+      const ghUrl = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/main/${FILE_PATH}?t=${Date.now()}`;
+      res = await fetch(ghUrl, { cache: 'no-store' }).catch(() => null);
     }
 
     if (res && res.ok) {

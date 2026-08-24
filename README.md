@@ -9,20 +9,24 @@ Built to replace spreadsheet-based seating workflows with a visual, responsive d
 ## 🌟 Key Features
 
 - **Secret Access Gate**: Lightweight private access screen with secret `kingabso`, remembered in browser storage.
-- **Interactive 2D Floor Plan**: 34 visual tables arranged around the Stage, Dance Floor, DJ Booth, Cocktails/Coffee Bars, and Entrance.
-- **Drag & Drop Seating**: Drag guest cards from the unassigned sidebar directly onto tables, or move groups between tables with instantaneous re-indexing.
-- **Smart RSVP CSV Parsing & Reconciliation**:
-  - Full UTF-8 BOM, Hebrew, and RFC 4180 parsing.
-  - Correctly treats `Approved` as the actual attendee seat count.
-  - Non-destructive re-import: Preserves existing table seating when updated RSVP lists are imported tomorrow, flags non-attending guests, and places new arrivals into Unassigned.
-- **Real-Time Live Dashboard**: Total attending, seated vs unassigned counts, table capacity gauges (Empty, Normal, Moderate, Full, Overcapacity warning).
-- **Dual Persistence Architecture**:
-  - **Git Serverless Persistence**: Backs up state directly to `data/event-state.json` via `/api/state` using serverless GitHub API without leaking secrets to the frontend.
-  - **Browser LocalStorage Durability**: Instant offline caching and durability.
-  - **JSON Backup / Restore**: Export and import full event snapshots.
-- **High-Res Export**: Download printable PDF charts and PNG floor plan snapshots.
-- **Undo / Redo & Shortcuts**: Full history stack with keyboard shortcuts (`Ctrl+Z`, `Ctrl+Shift+Z`, `Ctrl+S`, `Esc`).
-- **Dark / Light Mode**: Polished Apple/Linear-grade themes with system preference detection.
+- **Interactive 2D Floor Plan**: 34 visual tables arranged around Stage, Dance Floor, DJ Booth, Bars, and Entrance.
+- **Table Rearrangement & Design**: Freely drag tables to reposition them in **Edit Layout Mode**, toggle table shapes (**Round / Rectangle**), customize table names & zones, and adjust capacities.
+- **Continuous 10-Minute Playwright Sync Daemon**:
+  - Auto-logs in (`0503505350` / `962317`), scrapes latest RSVP status changes, and saves session tokens.
+  - Automatically recovers from session expirations and errors without crashing.
+- **Telegram Bot Notifications**:
+  - Pushes live updates directly to your Telegram bot (`8608609950:AAEGt_bCtuHmmWR5ORKl1uEOKC0eOLFfzYg`).
+  - Reports newly approved guests, cancellations/rejections, attendee count changes, and totals.
+- **Non-Destructive Live State Reconciliation**:
+  - Preserves all your existing table assignments when refreshed data arrives from the scraper!
+  - Never removes seated guests or duplicates entries.
+- **Full Multi-Format Export Suite**:
+  - 📊 **Excel / CSV Table List**: Complete breakdown with table numbers, guest names, seat counts, phone numbers, and notes.
+  - 🌐 **Interactive Standalone HTML**: Single-file shareable web map with Hebrew guest search and table click popups.
+  - 👁️ **Public Guest Lookup View**: View-only mode with instant table highlight search.
+  - 📄 **High-Res PDF Chart & PNG Image**: Printable floor plan snapshots.
+  - 💾 **Full JSON Backup & Restore**: Snapshot backup of entire venue state.
+- **Automatic Server-Side Persistence**: Every move, drag, note, and shape change is automatically saved to `data/event-state.json`.
 
 ---
 

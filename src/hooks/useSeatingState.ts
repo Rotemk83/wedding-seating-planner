@@ -4,6 +4,7 @@ import type {
   EventState,
   GuestGroup,
   TableOccupancy,
+  TableConfig,
   StatsSummary,
   ReconcileSummary,
 } from '../types';
@@ -62,8 +63,19 @@ export function useSeatingState() {
       try {
         const { state: loadedState } = await loadEventState();
         if (loadedState && loadedState.guests && loadedState.guests.length > 0) {
-          setState(loadedState);
-          setLastSavedTime(loadedState.lastModified);
+          const mergedState: EventState = {
+            ...loadedState,
+            tables:
+              loadedState.tables && loadedState.tables.length > 0
+                ? loadedState.tables
+                : getDefaultTables(loadedState.defaultCapacity || 12),
+            hallElements:
+              loadedState.hallElements && loadedState.hallElements.length > 0
+                ? loadedState.hallElements
+                : getDefaultHallElements(),
+          };
+          setState(mergedState);
+          setLastSavedTime(mergedState.lastModified);
           setSaveStatus('saved');
         }
       } catch (err) {
@@ -74,6 +86,79 @@ export function useSeatingState() {
     }
     init();
   }, []);
+
+  // Periodic background check for live updates from scraper / remote state
+  useEffect(() => {
+    if (!isInitialized) return;
+
+    const checkLiveUpdates = async () => {
+      // Avoid merging if user currently has pending local edits
+      if (saveStatus === 'unsaved' || saveStatus === 'saving') return;
+
+      try {
+        const { state: remoteState } = await loadEventState();
+        if (
+          remoteState &&
+          remoteState.lastModified &&
+          state.lastModified &&
+          new Date(remoteState.lastModified).getTime() > new Date(state.lastModified).getTime()
+        ) {
+          if (state.guests.length === 0) {
+            // First time loading data from background scraper
+            setState((prev) => ({
+              ...remoteState,
+              tables:
+                remoteState.tables && remoteState.tables.length > 0
+                  ? remoteState.tables
+                  : prev.tables && prev.tables.length > 0
+                  ? prev.tables
+                  : getDefaultTables(remoteState.defaultCapacity || 12),
+              hallElements:
+                remoteState.hallElements && remoteState.hallElements.length > 0
+                  ? remoteState.hallElements
+                  : prev.hallElements && prev.hallElements.length > 0
+                  ? prev.hallElements
+                  : getDefaultHallElements(),
+            }));
+            setLastSavedTime(remoteState.lastModified);
+            setSaveStatus('saved');
+          } else if (remoteState.guests && remoteState.guests.length > 0) {
+            // Non-destructively reconcile guest counts & new arrivals
+            const { updatedGuests, updatedAssignments } = reconcileGuestsWithCsv(
+              state.guests,
+              state.assignments,
+              state.tables,
+              remoteState.guests
+            );
+
+            setState((prev) => ({
+              ...prev,
+              guests: updatedGuests,
+              assignments: updatedAssignments,
+              lastModified: remoteState.lastModified,
+            }));
+            setLastSavedTime(remoteState.lastModified);
+            setSaveStatus('saved');
+          }
+        }
+      } catch (err) {
+        // Silently continue
+      }
+    };
+
+    const intervalId = window.setInterval(checkLiveUpdates, 20000);
+    const onVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        checkLiveUpdates();
+      }
+    };
+
+    document.addEventListener('visibilitychange', onVisibilityChange);
+    return () => {
+      window.clearInterval(intervalId);
+      document.removeEventListener('visibilitychange', onVisibilityChange);
+    };
+  }, [isInitialized, state.lastModified, state.guests, state.assignments, state.tables, saveStatus]);
 
   // Compute Table Occupancies
   const tableOccupancies = useMemo(() => {
@@ -370,6 +455,17 @@ export function useSeatingState() {
     [updateStateWithHistory]
   );
 
+  // Update table details (shape, name, zone, capacity, notes, dimensions)
+  const updateTableDetails = useCallback(
+    (tableId: string, updates: Partial<TableConfig>) => {
+      updateStateWithHistory((prev) => ({
+        ...prev,
+        tables: prev.tables.map((t) => (t.id === tableId ? { ...t, ...updates } : t)),
+      }));
+    },
+    [updateStateWithHistory]
+  );
+
   // Update table position
   const updateTablePosition = useCallback(
     (tableId: string, x: number, y: number) => {
@@ -490,6 +586,7 @@ export function useSeatingState() {
     clearTable,
     updateTableCapacity,
     updateTableNotes,
+    updateTableDetails,
     updateTablePosition,
     dismissGuestFlag,
     importCsv,

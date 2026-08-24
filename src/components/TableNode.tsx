@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { useDroppable } from '@dnd-kit/core';
-import { AlertTriangle, Users } from 'lucide-react';
+import { AlertTriangle, Users, Move } from 'lucide-react';
 import type { TableConfig, TableOccupancy } from '../types';
 
 interface TableNodeProps {
@@ -20,16 +20,64 @@ export const TableNode: React.FC<TableNodeProps> = ({
   isHighlighted,
   isEditLayoutMode,
   onSelectTable,
+  onTablePositionChange,
 }) => {
   const { isOver, setNodeRef } = useDroppable({
     id: table.id,
+    disabled: isEditLayoutMode,
     data: {
       type: 'table',
       table,
     },
   });
 
+  const [dragOffset, setDragOffset] = useState<{ x: number; y: number } | null>(null);
+  const isDraggingTableRef = useRef(false);
+  const dragStartPosRef = useRef({ clientX: 0, clientY: 0, origX: 0, origY: 0 });
+
   const { assignedCount, capacity, percentage, status, guestGroups } = occupancy;
+
+  // Table position dragging handlers in Layout Edit Mode
+  const handlePointerDown = (e: React.PointerEvent) => {
+    if (!isEditLayoutMode || !onTablePositionChange) return;
+    e.stopPropagation();
+    (e.target as HTMLElement).setPointerCapture?.(e.pointerId);
+    isDraggingTableRef.current = true;
+    dragStartPosRef.current = {
+      clientX: e.clientX,
+      clientY: e.clientY,
+      origX: table.x,
+      origY: table.y,
+    };
+    setDragOffset({ x: 0, y: 0 });
+  };
+
+  const handlePointerMove = (e: React.PointerEvent) => {
+    if (!isDraggingTableRef.current) return;
+    e.stopPropagation();
+    const dx = e.clientX - dragStartPosRef.current.clientX;
+    const dy = e.clientY - dragStartPosRef.current.clientY;
+    setDragOffset({ x: dx, y: dy });
+  };
+
+  const handlePointerUp = (e: React.PointerEvent) => {
+    if (!isDraggingTableRef.current) return;
+    e.stopPropagation();
+    isDraggingTableRef.current = false;
+    const dx = e.clientX - dragStartPosRef.current.clientX;
+    const dy = e.clientY - dragStartPosRef.current.clientY;
+    setDragOffset(null);
+
+    // Apply snap to grid (10px increments)
+    const rawX = dragStartPosRef.current.origX + dx;
+    const rawY = dragStartPosRef.current.origY + dy;
+    const snappedX = Math.max(20, Math.min(1300, Math.round(rawX / 10) * 10));
+    const snappedY = Math.max(20, Math.min(1150, Math.round(rawY / 10) * 10));
+
+    if (onTablePositionChange && (snappedX !== table.x || snappedY !== table.y)) {
+      onTablePositionChange(table.id, snappedX, snappedY);
+    }
+  };
 
   // Status color styles
   const getStatusClasses = () => {
@@ -76,23 +124,45 @@ export const TableNode: React.FC<TableNodeProps> = ({
   };
 
   const isRound = table.shape === 'round';
+  const posX = (table.x || 0) + (dragOffset?.x || 0);
+  const posY = (table.y || 0) + (dragOffset?.y || 0);
 
   return (
     <div
       ref={setNodeRef}
-      onClick={() => onSelectTable(table.id)}
-      style={{
-        left: `${table.x}px`,
-        top: `${table.y}px`,
-        width: `${table.width}px`,
-        height: `${table.height}px`,
+      onClick={() => {
+        if (!isDraggingTableRef.current) {
+          onSelectTable(table.id);
+        }
       }}
-      className={`absolute flex flex-col items-center justify-center p-2 text-center transition-all duration-150 backdrop-blur-md cursor-pointer select-none border-2 shadow-sm ${
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={handlePointerUp}
+      onPointerCancel={handlePointerUp}
+      style={{
+        left: `${posX}px`,
+        top: `${posY}px`,
+        width: `${table.width || (isRound ? 120 : 160)}px`,
+        height: `${table.height || (isRound ? 120 : 100)}px`,
+        touchAction: isEditLayoutMode ? 'none' : 'auto',
+      }}
+      className={`table-node-element absolute flex flex-col items-center justify-center p-2 text-center transition-all duration-75 backdrop-blur-md cursor-pointer select-none border-2 shadow-sm ${
         isRound ? 'rounded-full' : 'rounded-2xl'
-      } ${getStatusClasses()} ${isEditLayoutMode ? 'cursor-move ring-1 ring-dashed ring-amber-500/50' : ''}`}
+      } ${getStatusClasses()} ${
+        isEditLayoutMode
+          ? 'cursor-move ring-2 ring-amber-500/70 shadow-2xl hover:scale-105 active:scale-110 z-20'
+          : ''
+      }`}
     >
+      {/* Edit Mode Badge */}
+      {isEditLayoutMode && (
+        <div className="absolute -top-2 -left-2 w-5 h-5 rounded-full bg-amber-500 text-white flex items-center justify-center shadow-md">
+          <Move className="w-3 h-3" />
+        </div>
+      )}
+
       {/* Warning icon for overcapacity */}
-      {status === 'overcapacity' && (
+      {status === 'overcapacity' && !isEditLayoutMode && (
         <div
           className="absolute -top-2 -right-1.5 w-6 h-6 rounded-full bg-rose-500 text-white flex items-center justify-center shadow-md animate-bounce"
           title="Over capacity!"

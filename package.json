@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
+    "start": "powershell -ExecutionPolicy Bypass -File ./start.ps1",
+    "scrape": "python scripts/scrape_guests.py",
     "preview": "vite preview"
   },
   "dependencies": {

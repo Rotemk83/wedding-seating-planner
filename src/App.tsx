@@ -13,6 +13,8 @@ import { Users, LayoutGrid } from 'lucide-react';
 import { useSeatingState } from './hooks/useSeatingState';
 import { isSecretGateUnlocked, getSavedTheme, setSavedTheme, readJsonBackupFile } from './lib/storage';
 import { exportHallToPdf, exportHallToPng } from './lib/pdfExport';
+import { exportTablesToExcelCsv } from './lib/excelExport';
+import { exportStandaloneHtmlView } from './lib/htmlViewExport';
 import { SecretGate } from './components/SecretGate';
 import { Header } from './components/Header';
 import { Sidebar } from './components/Sidebar';
@@ -21,6 +23,7 @@ import { TableDetailsDrawer } from './components/TableDetailsDrawer';
 import { LandingImport } from './components/LandingImport';
 import { ReconcileModal } from './components/ReconcileModal';
 import { GuestCard } from './components/GuestCard';
+import { PublicSeatingView } from './components/PublicSeatingView';
 import type { GuestGroup } from './types';
 
 export function App() {
@@ -28,6 +31,10 @@ export function App() {
   const [theme, setTheme] = useState<'light' | 'dark' | 'system'>(() => getSavedTheme());
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(() => window.innerWidth >= 1024);
   const [activeDragGuest, setActiveDragGuest] = useState<GuestGroup | null>(null);
+  const [isPublicViewMode, setIsPublicViewMode] = useState<boolean>(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('view') === 'public' || window.location.hash === '#view';
+  });
 
   const csvInputRef = useRef<HTMLInputElement>(null);
   const backupInputRef = useRef<HTMLInputElement>(null);
@@ -58,6 +65,7 @@ export function App() {
     clearTable,
     updateTableCapacity,
     updateTableNotes,
+    updateTableDetails,
     updateTablePosition,
     dismissGuestFlag,
     importCsv,
@@ -180,14 +188,24 @@ export function App() {
     e.target.value = '';
   };
 
-  // Selected table object
-  const selectedTable = state.tables.find((t) => t.id === selectedTableId) || null;
-  const selectedTableOccupancy = selectedTableId ? tableOccupancies.get(selectedTableId) || null : null;
+  // If in public view mode, render public view directly
+  if (isPublicViewMode) {
+    return (
+      <PublicSeatingView
+        state={state}
+        onExit={() => setIsPublicViewMode(false)}
+      />
+    );
+  }
 
   // If secret gate is locked, render gate screen
   if (!unlocked) {
     return <SecretGate onUnlock={() => setUnlocked(true)} />;
   }
+
+  // Selected table object
+  const selectedTable = state.tables.find((t) => t.id === selectedTableId) || null;
+  const selectedTableOccupancy = selectedTableId ? tableOccupancies.get(selectedTableId) || null : null;
 
   return (
     <div className="h-screen w-screen flex flex-col overflow-hidden bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-slate-100">
@@ -229,6 +247,9 @@ export function App() {
         onImportJsonBackup={() => backupInputRef.current?.click()}
         onExportPng={exportHallToPng}
         onExportPdf={() => exportHallToPdf(state)}
+        onExportExcelCsv={() => exportTablesToExcelCsv(state)}
+        onExportStandaloneHtml={() => exportStandaloneHtmlView(state)}
+        onTogglePublicView={() => setIsPublicViewMode(true)}
         onClearAllData={resetAllData}
       />
 
@@ -283,12 +304,12 @@ export function App() {
                 {sidebarOpen ? (
                   <>
                     <LayoutGrid className="w-4 h-4" />
-                    <span>View Floor Plan</span>
+                    <span>הצג מפת אולם</span>
                   </>
                 ) : (
                   <>
                     <Users className="w-4 h-4" />
-                    <span>Guests ({stats.unassignedAttending} unseated)</span>
+                    <span>אורחים ({stats.unassignedAttending} לא שובצו)</span>
                   </>
                 )}
               </button>
@@ -317,6 +338,7 @@ export function App() {
           onClearTable={clearTable}
           onUpdateCapacity={updateTableCapacity}
           onUpdateNotes={updateTableNotes}
+          onUpdateTableDetails={updateTableDetails}
         />
 
         {/* Reconciliation Report Modal after importing newer CSV */}

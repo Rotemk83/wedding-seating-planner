@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Scraper session and debug artifacts
+scripts/session_state.json
+scripts/*.png
+scripts/last_scrape_cache.json
