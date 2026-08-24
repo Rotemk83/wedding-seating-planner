@@ -59,6 +59,17 @@ function localStatePlugin(): Plugin {
 // https://vite.dev/config/
 export default defineConfig({
   base: './',
+  server: {
+    watch: {
+      ignored: [
+        '**/scripts/**',
+        '**/data/**',
+        '**/public/data/**',
+        '**/*.csv',
+        '**/*.json',
+      ],
+    },
+  },
   plugins: [
     localStatePlugin(),
     react(),

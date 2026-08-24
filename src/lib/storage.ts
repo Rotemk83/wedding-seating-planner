@@ -142,17 +142,39 @@ export async function loadEventState(): Promise<{ state: EventState | null; sour
       headers['Authorization'] = `Bearer ${token}`;
     }
 
-    // Try serverless endpoint first with cache-busting timestamp
+    // 1. Try serverless / local API first
     let res = await fetch(`/api/state?t=${Date.now()}`, {
       method: 'GET',
       headers,
       cache: 'no-store',
     }).catch(() => null);
 
-    // If serverless is 404/static (like on GitHub Pages), try fetching data/event-state.json directly from GitHub
+    // 2. Try raw GitHub user content
     if (!res || !res.ok) {
       const ghUrl = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/main/${FILE_PATH}?t=${Date.now()}`;
       res = await fetch(ghUrl, { cache: 'no-store' }).catch(() => null);
+    }
+
+    // 3. Try relative static file on GitHub Pages (dist/data/event-state.json)
+    if (!res || !res.ok) {
+      res = await fetch(`./data/event-state.json?t=${Date.now()}`, { cache: 'no-store' }).catch(() => null);
+    }
+
+    // 4. Try GitHub REST API
+    if (!res || !res.ok) {
+      const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${FILE_PATH}?ref=main&t=${Date.now()}`;
+      const apiRes = await fetch(apiUrl, { headers: { Accept: 'application/vnd.github.v3+json' } }).catch(() => null);
+      if (apiRes && apiRes.ok) {
+        const fileData = await apiRes.json();
+        if (fileData.content) {
+          const rawContent = decodeURIComponent(escape(atob(fileData.content.replace(/\s/g, ''))));
+          const parsed = JSON.parse(rawContent) as EventState;
+          if (parsed && parsed.guests && parsed.guests.length > 0) {
+            saveLocalCachedState(parsed);
+            return { state: parsed, source: 'remote' };
+          }
+        }
+      }
     }
 
     if (res && res.ok) {

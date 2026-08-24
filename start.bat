@@ -1,18 +1,18 @@
 @echo off
-chcp 65001 > nul
+setlocal
+cd /d "%~dp0"
 echo ======================================================================
-echo   💍 Wedding Seating Planner + Live Playwright Sync
+echo   Wedding Seating Planner + Live Playwright Sync
 echo ======================================================================
 echo.
 
-:: 1. Launch Python RSVP Sync Daemon in a separate background window
-echo [1/2] Launching Python 10-minute RSVP Sync Daemon...
-start "Wedding RSVP Sync Daemon" cmd /k "python scripts\scrape_guests.py"
+echo [1/2] Starting Python 10-minute RSVP Sync Daemon in background...
+start "Wedding-RSVP-Sync-Daemon" cmd /c "python scripts\scrape_guests.py"
 
-:: 2. Launch Vite Local Web Server
-echo [2/2] Launching Vite Web App...
+echo [2/2] Starting Vite Web Server...
 echo.
-echo 🌐 The app will open at: http://localhost:5173
-echo 🔑 Password / Secret Code: kingabso
+echo Address: http://localhost:5173
+echo Secret Code: kingabso
 echo.
-npm.cmd run dev -- --open
+
+call npm.cmd run dev -- --open
