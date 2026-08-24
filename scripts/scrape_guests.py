@@ -3,14 +3,14 @@ Wedding RSVP Automated Guest Scraper & Real-Time Syncer with Telegram Bot
 -------------------------------------------------------------------------
 Automates login to the RSVP portal with Playwright, extracts guest cards,
 attendance counts, and statuses (approved, declined, pending), reconciles
-non-destructively with the wedding seating planner, and sends rich Telegram
-notifications to your bot on every update.
+non-destructively with the wedding seating planner, pushes to GitHub repository,
+and sends live Telegram notifications on every update.
 """
 
 import sys
 import os
 
-# Fix Windows console encoding for Hebrew and emoji output
+# Ensure UTF-8 output on Windows consoles
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 if hasattr(sys.stderr, "reconfigure"):
@@ -21,6 +21,8 @@ import json
 import time
 import argparse
 import traceback
+import subprocess
+import shutil
 import urllib.request
 import urllib.parse
 from datetime import datetime, timezone
@@ -31,6 +33,7 @@ DEFAULT_URL = "https://callup.ltd/ua/main"
 DEFAULT_PHONE = "0503505350"
 DEFAULT_PASSWORD = "962317"
 TELEGRAM_BOT_TOKEN = "8608609950:AAEGt_bCtuHmmWR5ORKl1uEOKC0eOLFfzYg"
+TELEGRAM_CHAT_FILE = Path("scripts/telegram_chat_id.txt")
 STORAGE_STATE_PATH = Path("scripts/session_state.json")
 PREV_SCRAPE_CACHE_PATH = Path("scripts/last_scrape_cache.json")
 OUTPUT_CSV_PATH = Path("WeddingGuests.csv")
@@ -48,57 +51,103 @@ def generate_guest_id(name: str, group: str, index: int) -> str:
 
 
 # ==========================================
-# Telegram Bot Notification Engine
+# Telegram Bot Engine & Multi-Chat Management
 # ==========================================
 
-def get_telegram_chat_id(token=TELEGRAM_BOT_TOKEN, explicit_chat_id=None):
+TELEGRAM_CHATS_FILE = Path("scripts/telegram_chat_ids.json")
+
+
+def get_all_telegram_chat_ids(token=TELEGRAM_BOT_TOKEN, explicit_chat_id=None):
+    chat_ids = set()
+
+    # If explicit chat passed
     if explicit_chat_id:
-        return str(explicit_chat_id)
+        chat_ids.add(str(explicit_chat_id).strip())
+
+    # Check environment variable
     env_id = os.environ.get("TELEGRAM_CHAT_ID")
     if env_id:
-        return env_id
-    # Discover latest chat_id from getUpdates
+        for cid in env_id.split(","):
+            if cid.strip():
+                chat_ids.add(cid.strip())
+
+    # Load previously saved chats from JSON
+    if TELEGRAM_CHATS_FILE.exists():
+        try:
+            saved = json.loads(TELEGRAM_CHATS_FILE.read_text(encoding="utf-8"))
+            if isinstance(saved, list):
+                chat_ids.update(str(x) for x in saved)
+        except Exception:
+            pass
+
+    # Discover new chats and groups via getUpdates
     try:
         url = f"https://api.telegram.org/bot{token}/getUpdates"
         req = urllib.request.Request(url, headers={"User-Agent": "Wedding-Seating-Bot"})
-        with urllib.request.urlopen(req, timeout=8) as resp:
+        with urllib.request.urlopen(req, timeout=6) as resp:
             data = json.loads(resp.read().decode('utf-8'))
             if data.get("ok") and data.get("result"):
-                for update in reversed(data["result"]):
-                    msg = update.get("message") or update.get("my_chat_member") or update.get("channel_post")
+                for update in data["result"]:
+                    msg = (
+                        update.get("message") or 
+                        update.get("my_chat_member") or 
+                        update.get("channel_post") or
+                        update.get("chat_member")
+                    )
                     if msg and msg.get("chat"):
-                        return str(msg["chat"]["id"])
+                        c_id = str(msg["chat"]["id"])
+                        c_type = msg["chat"].get("type", "unknown")
+                        c_title = msg["chat"].get("title") or msg["chat"].get("first_name", "")
+                        if c_id not in chat_ids:
+                            print(f"📱 Discovered Telegram {c_type}: '{c_title}' (ID: {c_id})", flush=True)
+                        chat_ids.add(c_id)
     except Exception as e:
-        print(f"Notice auto-detecting Telegram chat_id: {e}")
-    return None
+        print(f"Notice checking Telegram updates: {e}", flush=True)
+
+    if chat_ids:
+        TELEGRAM_CHATS_FILE.parent.mkdir(parents=True, exist_ok=True)
+        TELEGRAM_CHATS_FILE.write_text(json.dumps(list(chat_ids)), encoding="utf-8")
+
+    return list(chat_ids)
 
 
 def send_telegram_notification(text: str, token=TELEGRAM_BOT_TOKEN, chat_id=None) -> bool:
-    target_chat = get_telegram_chat_id(token, chat_id)
-    if not target_chat:
-        print("💡 [Telegram Notice]: To receive notifications on Telegram, send a message (like /start) to your bot @botfather or pass --chat-id.")
+    if chat_id:
+        targets = [str(x).strip() for x in (chat_id if isinstance(chat_id, list) else [chat_id])]
+    else:
+        targets = get_all_telegram_chat_ids(token)
+
+    if not targets:
+        print("\n💡 [Telegram Setup Required]:", flush=True)
+        print("   1. Open Telegram and search for: @Court_Finder_dev_bot", flush=True)
+        print("   2. Link: https://t.me/Court_Finder_dev_bot", flush=True)
+        print("   3. In your group: Add the bot and type `/start` or mention @Court_Finder_dev_bot.", flush=True)
         return False
-    try:
-        url = f"https://api.telegram.org/bot{token}/sendMessage"
-        payload = {
-            "chat_id": target_chat,
-            "text": text,
-            "parse_mode": "HTML",
-            "disable_web_page_preview": True,
-        }
-        req = urllib.request.Request(
-            url,
-            data=json.dumps(payload).encode('utf-8'),
-            headers={"Content-Type": "application/json", "User-Agent": "Wedding-Seating-Bot"}
-        )
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            res_data = json.loads(resp.read().decode('utf-8'))
-            if res_data.get("ok"):
-                print(f"📱 Telegram notification sent to chat ID: {target_chat}")
-                return True
-    except Exception as e:
-        print(f"⚠️ Telegram send error: {e}")
-    return False
+
+    success = False
+    for target_chat in targets:
+        try:
+            url = f"https://api.telegram.org/bot{token}/sendMessage"
+            payload = {
+                "chat_id": target_chat,
+                "text": text,
+                "parse_mode": "HTML",
+                "disable_web_page_preview": True,
+            }
+            req = urllib.request.Request(
+                url,
+                data=json.dumps(payload).encode('utf-8'),
+                headers={"Content-Type": "application/json", "User-Agent": "Wedding-Seating-Bot"}
+            )
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                res_data = json.loads(resp.read().decode('utf-8'))
+                if res_data.get("ok"):
+                    print(f"📱 Telegram notification delivered to: {target_chat}", flush=True)
+                    success = True
+        except Exception as e:
+            print(f"⚠️ Telegram delivery error for {target_chat}: {e}", flush=True)
+
+    return success
 
 
 def compute_scrape_diff(current_rows, prev_rows):
@@ -120,7 +169,6 @@ def compute_scrape_diff(current_rows, prev_rows):
     new_declined = []
     count_changes = []
     new_arrivals = []
-    new_hesitating = []
 
     for curr in current_rows:
         key = clean_str(curr.get("name")).lower()
@@ -153,7 +201,6 @@ def compute_scrape_diff(current_rows, prev_rows):
         "new_declined": new_declined,
         "count_changes": count_changes,
         "new_arrivals": new_arrivals,
-        "new_hesitating": new_hesitating,
     }
 
 
@@ -209,6 +256,7 @@ def format_telegram_message(diff, totals):
 
     lines.append("")
     lines.append("🪑 תרשים ההושבה באתר מסונכרן בזמן אמת!")
+    lines.append("🔗 https://rotemk83.github.io/wedding-seating-planner/")
     return "\n".join(lines)
 
 
@@ -217,21 +265,15 @@ def format_telegram_message(diff, totals):
 # ==========================================
 
 def extract_guests_from_page(page):
-    """
-    Executes DOM extraction on the RSVP page.
-    Extracts guest cards, attendee ratios, group categories, phone, notes.
-    """
     extraction_script = """
     () => {
         const clean = s => (s || '').replace(/\\s+/g, ' ').trim();
         
-        // Find cards with white background containing ratio
         let cards = [...document.querySelectorAll('div[background="#ffffff"]')]
             .filter(card => [...card.querySelectorAll('div')].some(d =>
                 /^\\s*\\d+\\s*\\/\\s*\\d+\\s*$/.test(d.textContent || '')
             ));
 
-        // Fallback for computed white background
         if (!cards.length) {
             cards = [...document.querySelectorAll('div')]
                 .filter(card => {
@@ -254,7 +296,6 @@ def extract_guests_from_page(page):
             );
             const ratio = clean(ratioEl?.textContent);
             
-            // "2 / 1" => 2 approved, 1 invited
             const parts = ratio.split('/').map(x => x.trim());
             const approved = parts[0] ? parseInt(parts[0], 10) || 0 : 0;
             const invited = parts[1] ? parseInt(parts[1], 10) || approved || 1 : (approved || 1);
@@ -264,14 +305,12 @@ def extract_guests_from_page(page):
                 firstSection?.innerText || firstSection?.textContent
             );
             
-            // Extract "+ 3" prefix
             const prefixMatch = rawName.match(/^\\+\\s*(\\d+)\\s*/);
             const uiExtra = prefixMatch ? prefixMatch[1] : '';
             const name = clean(
                 rawName.replace(/^\\+\\s*\\d+\\s*/, '')
             );
             
-            // Find nearest group header above this card
             let group = '';
             let p = card.previousElementSibling;
             while (p) {
@@ -298,7 +337,6 @@ def extract_guests_from_page(page):
             };
         });
 
-        // Hebrew alphabetical sort
         rows.sort((a, b) =>
             a.name.localeCompare(b.name, 'he', { sensitivity: 'base' })
         );
@@ -310,9 +348,6 @@ def extract_guests_from_page(page):
 
 
 def save_to_csv(rows, output_path: Path):
-    """
-    Saves rows to UTF-8 BOM CSV compatible with Excel and the web app.
-    """
     headers = [
         'Name',
         'Approved',
@@ -338,28 +373,23 @@ def save_to_csv(rows, output_path: Path):
                 'UIExtra': r.get('uiExtra', ''),
                 'RawName': r.get('rawName', r.get('name', ''))
             })
-    print(f"📄 Saved {len(rows)} records to {output_path.name}")
+    print(f"📄 Saved {len(rows)} records to {output_path.name}", flush=True)
 
 
 def reconcile_into_event_state(scraped_rows, state_file_path: Path):
-    """
-    Non-destructively reconciles newly scraped guests with data/event-state.json.
-    PRESERVES ALL EXISTING TABLE SEATINGS, updates counts, and flags changes.
-    """
     current_state = {}
     if state_file_path.exists():
         try:
             with open(state_file_path, "r", encoding="utf-8") as f:
                 current_state = json.load(f)
         except Exception as e:
-            print(f"Warning reading existing state file: {e}")
+            print(f"Warning reading existing state file: {e}", flush=True)
 
     existing_guests = current_state.get("guests", [])
     existing_assignments = current_state.get("assignments", [])
     existing_tables = current_state.get("tables", [])
     
     existing_map_by_name = {clean_str(g.get("name")).lower(): g for g in existing_guests if g.get("name")}
-    existing_map_by_id = {g.get("id"): g for g in existing_guests if g.get("id")}
     assigned_guest_ids = {a.get("guestId"): a.get("tableId") for a in existing_assignments if a.get("guestId")}
 
     updated_guests = []
@@ -404,7 +434,6 @@ def reconcile_into_event_state(scraped_rows, state_file_path: Path):
             }
             updated_guests.append(merged_guest)
         else:
-            # New guest arrival
             guest_id = generate_guest_id(new_g["name"], new_g["group"], idx)
             new_arrivals_count += 1
             updated_guests.append({
@@ -420,7 +449,6 @@ def reconcile_into_event_state(scraped_rows, state_file_path: Path):
                 "statusFlag": "new_arrival"
             })
 
-    # Preserve any existing guests not currently returned in scrape
     for existing in existing_guests:
         if existing.get("id") not in processed_existing_ids:
             is_assigned = existing.get("id") in assigned_guest_ids
@@ -429,7 +457,6 @@ def reconcile_into_event_state(scraped_rows, state_file_path: Path):
                 "statusFlag": "not_attending" if is_assigned else "normal"
             })
 
-    # Build updated event state with fresh ISO timestamp
     iso_now = datetime.now(timezone.utc).isoformat()
     updated_state = {
         "version": current_state.get("version", "1.0.0"),
@@ -448,53 +475,41 @@ def reconcile_into_event_state(scraped_rows, state_file_path: Path):
     with open(state_file_path, "w", encoding="utf-8") as f:
         json.dump(updated_state, f, ensure_ascii=False, indent=2)
 
-    print(f"💾 Synced to {state_file_path.name} at {iso_now}")
-    print(f"   ↳ {len(updated_guests)} total guests | +{new_arrivals_count} new | {updated_counts_count} count updates | {not_attending_assigned_count} unconfirmed-at-table")
+    print(f"💾 Synced to {state_file_path.name} at {iso_now}", flush=True)
+    print(f"   ↳ {len(updated_guests)} total guests | +{new_arrivals_count} new | {updated_counts_count} count updates | {not_attending_assigned_count} unconfirmed-at-table", flush=True)
     return updated_state
 
 
 def sync_to_git_repository(commit_msg: str):
-    """
-    Syncs updated data files and pushes to GitHub repository.
-    """
-    import subprocess
-    import shutil
     try:
-        # Copy to public/data/event-state.json for web access
         public_data = Path("public/data/event-state.json")
         public_data.parent.mkdir(parents=True, exist_ok=True)
         if EVENT_STATE_PATH.exists():
             shutil.copyfile(EVENT_STATE_PATH, public_data)
 
-        # Stage updated data files
         subprocess.run(["git", "add", "data/event-state.json", "public/data/event-state.json", "WeddingGuests.csv"], capture_output=True)
 
-        # Check if there are changes to commit
         diff_check = subprocess.run(["git", "diff", "--staged", "--quiet"])
         if diff_check.returncode != 0:
             subprocess.run(["git", "commit", "-m", commit_msg], capture_output=True, check=True)
-            print(f"📦 Committed data updates to git: {commit_msg}")
+            print(f"📦 Committed data updates to git: {commit_msg}", flush=True)
 
-            # Push to GitHub origin main
             push_res = subprocess.run(["git", "push", "origin", "main"], capture_output=True, text=True)
             if push_res.returncode == 0:
-                print("🚀 Pushed updates directly to GitHub https://github.com/Rotemk83/wedding-seating-planner (main branch)!")
+                print("🚀 Pushed updates directly to GitHub https://github.com/Rotemk83/wedding-seating-planner (main branch)!", flush=True)
             else:
-                print(f"⚠️ Git push output: {push_res.stderr.strip() or push_res.stdout.strip()}")
+                print(f"⚠️ Git push output: {push_res.stderr.strip() or push_res.stdout.strip()}", flush=True)
         else:
-            print("ℹ️ Git repository is already up to date with latest data.")
+            print("ℹ️ Git repository is already up to date with latest data.", flush=True)
     except Exception as e:
-        print(f"⚠️ Note on git sync: {e}")
+        print(f"⚠️ Note on git sync: {e}", flush=True)
 
 
 def perform_login(page, phone: str, password: str) -> bool:
-    """
-    Detects login form and performs automated login.
-    """
     try:
         phone_input = page.locator('input[name="phone"]')
         if phone_input.count() > 0 and phone_input.first.is_visible():
-            print(f"🔑 Login form detected. Logging in with phone {phone}...")
+            print(f"🔑 Login form detected. Logging in with phone {phone}...", flush=True)
             phone_input.first.fill(phone)
             page.wait_for_timeout(300)
 
@@ -512,17 +527,13 @@ def perform_login(page, phone: str, password: str) -> bool:
             page.wait_for_timeout(4000)
             return True
     except Exception as e:
-        print(f"Login check note: {e}")
+        print(f"Login check note: {e}", flush=True)
     return False
 
 
 def run_sync_cycle(page, context, site_url: str, phone: str, password: str, chat_id: str = None):
-    """
-    Runs a single sync cycle, saves CSV, updates data/event-state.json, and posts to Telegram.
-    """
-    print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 🔄 Starting RSVP Sync Cycle...")
+    print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 🔄 Starting RSVP Sync Cycle...", flush=True)
 
-    # Navigate or refresh
     try:
         current_url = page.url
         if not current_url or current_url == "about:blank" or site_url not in current_url:
@@ -530,21 +541,19 @@ def run_sync_cycle(page, context, site_url: str, phone: str, password: str, chat
         else:
             page.reload(wait_until="domcontentloaded", timeout=45000)
     except Exception as e:
-        print(f"⚠️ Navigation error, reloading {site_url}: {e}")
+        print(f"⚠️ Navigation reload note, navigating to {site_url}: {e}", flush=True)
         page.goto(site_url, wait_until="domcontentloaded", timeout=60000)
 
     page.wait_for_timeout(2000)
 
-    # Perform login if needed
     logged_in = perform_login(page, phone, password)
     if logged_in:
         try:
             context.storage_state(path=str(STORAGE_STATE_PATH))
-            print("💾 Saved refreshed session state to session_state.json")
+            print("💾 Saved refreshed session state to session_state.json", flush=True)
         except Exception:
             pass
 
-    # Scroll down to ensure all cards render
     try:
         for _ in range(4):
             page.evaluate("window.scrollBy(0, 1200)")
@@ -552,19 +561,17 @@ def run_sync_cycle(page, context, site_url: str, phone: str, password: str, chat
         page.evaluate("window.scrollTo(0, 0)")
         page.wait_for_timeout(1000)
     except Exception as e:
-        print(f"Scroll note: {e}")
+        print(f"Scroll note: {e}", flush=True)
 
-    # Extract guest cards
     rows = extract_guests_from_page(page)
 
     if not rows:
-        print("⚠️ No guest cards found on current page. Taking debug screenshot...")
+        print("⚠️ No guest cards found on current page. Taking debug screenshot...", flush=True)
         Path("scripts").mkdir(parents=True, exist_ok=True)
         page.screenshot(path="scripts/debug_screenshot.png")
-        print("Saved debug screenshot to scripts/debug_screenshot.png")
+        print("Saved debug screenshot to scripts/debug_screenshot.png", flush=True)
         return None
 
-    # Calculate statistics
     total_approved = sum(r.get("approved", 0) for r in rows)
     declined_count = sum(1 for r in rows if r.get("approved", 0) == 0)
     pending_count = sum(1 for r in rows if r.get("approved", 0) == 0 and r.get("invited", 0) > 0)
@@ -578,10 +585,10 @@ def run_sync_cycle(page, context, site_url: str, phone: str, password: str, chat
         "pending_count": pending_count,
     }
 
-    print(f"📊 Extracted {len(rows)} RSVP entries:")
-    print(f"   👥 Attending: {total_approved} seats across {approved_parties} parties")
-    print(f"   ❌ Declined / Not Coming: {declined_count}")
-    print(f"   ⏳ Pending / Unanswered: {pending_count}")
+    print(f"📊 Extracted {len(rows)} RSVP entries:", flush=True)
+    print(f"   👥 Attending: {total_approved} seats across {approved_parties} parties", flush=True)
+    print(f"   ❌ Declined / Not Coming: {declined_count}", flush=True)
+    print(f"   ⏳ Pending / Unanswered: {pending_count}", flush=True)
 
     # 1. Save CSV
     save_to_csv(rows, OUTPUT_CSV_PATH)
@@ -623,15 +630,18 @@ def start_automation(
     headless: bool = True,
     once: bool = False
 ):
-    print("=" * 65)
-    print("💍 Wedding RSVP Automated Guest Sync Daemon + Telegram Bot")
-    print(f"🌐 Target: {site_url}")
-    print(f"⏰ Sync Interval: Every {interval_seconds // 60} minutes ({interval_seconds}s)")
-    print(f"🤖 Telegram Bot Token: {TELEGRAM_BOT_TOKEN[:10]}...")
-    print(f"👁️ Headless Mode: {headless}")
-    print("=" * 65)
+    print("=" * 65, flush=True)
+    print("💍 Wedding RSVP Automated Guest Sync Daemon + Telegram Bot", flush=True)
+    print(f"🌐 Target: {site_url}", flush=True)
+    print(f"⏰ Sync Interval: Every {interval_seconds // 60} minutes ({interval_seconds}s)", flush=True)
+    print(f"🤖 Telegram Bot: @Court_Finder_dev_bot (https://t.me/Court_Finder_dev_bot)", flush=True)
+    print(f"👁️ Headless Mode: {headless}", flush=True)
+    print("=" * 65, flush=True)
 
     STORAGE_STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
+
+    # Initial chat list discovery
+    active_chats = get_all_telegram_chat_ids(token=TELEGRAM_BOT_TOKEN, explicit_chat_id=chat_id)
 
     with sync_playwright() as p:
         browser = p.chromium.launch(
@@ -655,7 +665,7 @@ def start_automation(
             try:
                 run_sync_cycle(page, context, site_url, phone, password, chat_id=chat_id)
             except Exception as err:
-                print(f"❌ Error during sync cycle #{cycle_count}: {err}")
+                print(f"❌ Error during sync cycle #{cycle_count}: {err}", flush=True)
                 traceback.print_exc()
                 try:
                     page.screenshot(path="scripts/error_screenshot.png")
@@ -663,15 +673,48 @@ def start_automation(
                     pass
 
             if once:
-                print("🏁 Single run completed.")
+                print("🏁 Single run completed.", flush=True)
                 break
 
             next_run_time = datetime.fromtimestamp(time.time() + interval_seconds).strftime('%H:%M:%S')
-            print(f"⏳ Cycle #{cycle_count} complete. Next sync at {next_run_time} (in {interval_seconds // 60} min)...")
+            print(f"\n⏳ Cycle #{cycle_count} complete. Monitoring active. Next sync at {next_run_time} (in {interval_seconds // 60} min)...", flush=True)
             cycle_count += 1
 
-            for _ in range(interval_seconds):
+            # Sleep in 1-second ticks while checking for new Telegram messages
+            for tick in range(interval_seconds):
                 time.sleep(1)
+                
+                # Check for new Telegram group / private chats every 15 seconds
+                if tick % 15 == 0:
+                    new_chats = get_all_telegram_chat_ids(token=TELEGRAM_BOT_TOKEN)
+                    diff_chats = set(new_chats) - set(active_chats)
+                    if diff_chats:
+                        active_chats = new_chats
+                        print(f"\n🎉 New Telegram chat/group connected: {diff_chats}! Sending status report...", flush=True)
+                        if PREV_SCRAPE_CACHE_PATH.exists():
+                            try:
+                                with open(PREV_SCRAPE_CACHE_PATH, "r", encoding="utf-8") as f:
+                                    cached_rows = json.load(f)
+                                total_app = sum(r.get("approved", 0) for r in cached_rows)
+                                dec_count = sum(1 for r in cached_rows if r.get("approved", 0) == 0)
+                                pend_count = sum(1 for r in cached_rows if r.get("approved", 0) == 0 and r.get("invited", 0) > 0)
+                                app_parties = sum(1 for r in cached_rows if r.get("approved", 0) > 0)
+                                totals = {
+                                    "total_rows": len(cached_rows),
+                                    "total_approved": total_app,
+                                    "approved_parties": app_parties,
+                                    "declined_count": dec_count,
+                                    "pending_count": pend_count,
+                                }
+                                diff = {"is_initial": True, "new_approved": [], "new_declined": [], "count_changes": [], "new_arrivals": []}
+                                send_telegram_notification(format_telegram_message(diff, totals), token=TELEGRAM_BOT_TOKEN, chat_id=list(diff_chats))
+                            except Exception as e:
+                                print(f"Note sending group initial report: {e}", flush=True)
+
+                # Periodic heartbeat log every 120s
+                if tick > 0 and tick % 120 == 0:
+                    remaining_mins = (interval_seconds - tick) // 60
+                    print(f"💓 [{datetime.now().strftime('%H:%M:%S')}] Monitoring daemon active... Next sync in {remaining_mins} minutes ({next_run_time})", flush=True)
 
         browser.close()
 
